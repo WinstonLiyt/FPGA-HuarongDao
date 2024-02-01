@@ -1,0 +1,2321 @@
+// Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+// --------------------------------------------------------------------------------
+// Tool Version: Vivado v.2016.2 (win64) Build 1577090 Thu Jun  2 16:32:40 MDT 2016
+// Date        : Wed Feb 01 23:06:08 2023
+// Host        : Liyt running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode funcsim
+//               c:/Users/Liyt/Desktop/FinalProject/FinalProject.srcs/sources_1/ip/photo/photo_sim_netlist.v
+// Design      : photo
+// Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
+//               or synthesized. This netlist cannot be used for SDF annotated simulation.
+// Device      : xc7a100tcsg324-1
+// --------------------------------------------------------------------------------
+`timescale 1 ps / 1 ps
+
+(* CHECK_LICENSE_TYPE = "photo,blk_mem_gen_v8_3_3,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "blk_mem_gen_v8_3_3,Vivado 2016.2" *) 
+(* NotValidForBitStream *)
+module photo
+   (clka,
+    addra,
+    douta);
+  (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTA CLK" *) input clka;
+  (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTA ADDR" *) input [13:0]addra;
+  (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTA DOUT" *) output [11:0]douta;
+
+  wire [13:0]addra;
+  wire clka;
+  wire [11:0]douta;
+  wire NLW_U0_dbiterr_UNCONNECTED;
+  wire NLW_U0_rsta_busy_UNCONNECTED;
+  wire NLW_U0_rstb_busy_UNCONNECTED;
+  wire NLW_U0_s_axi_arready_UNCONNECTED;
+  wire NLW_U0_s_axi_awready_UNCONNECTED;
+  wire NLW_U0_s_axi_bvalid_UNCONNECTED;
+  wire NLW_U0_s_axi_dbiterr_UNCONNECTED;
+  wire NLW_U0_s_axi_rlast_UNCONNECTED;
+  wire NLW_U0_s_axi_rvalid_UNCONNECTED;
+  wire NLW_U0_s_axi_sbiterr_UNCONNECTED;
+  wire NLW_U0_s_axi_wready_UNCONNECTED;
+  wire NLW_U0_sbiterr_UNCONNECTED;
+  wire [11:0]NLW_U0_doutb_UNCONNECTED;
+  wire [13:0]NLW_U0_rdaddrecc_UNCONNECTED;
+  wire [3:0]NLW_U0_s_axi_bid_UNCONNECTED;
+  wire [1:0]NLW_U0_s_axi_bresp_UNCONNECTED;
+  wire [13:0]NLW_U0_s_axi_rdaddrecc_UNCONNECTED;
+  wire [11:0]NLW_U0_s_axi_rdata_UNCONNECTED;
+  wire [3:0]NLW_U0_s_axi_rid_UNCONNECTED;
+  wire [1:0]NLW_U0_s_axi_rresp_UNCONNECTED;
+
+  (* C_ADDRA_WIDTH = "14" *) 
+  (* C_ADDRB_WIDTH = "14" *) 
+  (* C_ALGORITHM = "1" *) 
+  (* C_AXI_ID_WIDTH = "4" *) 
+  (* C_AXI_SLAVE_TYPE = "0" *) 
+  (* C_AXI_TYPE = "1" *) 
+  (* C_BYTE_SIZE = "9" *) 
+  (* C_COMMON_CLK = "0" *) 
+  (* C_COUNT_18K_BRAM = "1" *) 
+  (* C_COUNT_36K_BRAM = "5" *) 
+  (* C_CTRL_ECC_ALGO = "NONE" *) 
+  (* C_DEFAULT_DATA = "0" *) 
+  (* C_DISABLE_WARN_BHV_COLL = "0" *) 
+  (* C_DISABLE_WARN_BHV_RANGE = "0" *) 
+  (* C_ELABORATION_DIR = "./" *) 
+  (* C_ENABLE_32BIT_ADDRESS = "0" *) 
+  (* C_EN_DEEPSLEEP_PIN = "0" *) 
+  (* C_EN_ECC_PIPE = "0" *) 
+  (* C_EN_RDADDRA_CHG = "0" *) 
+  (* C_EN_RDADDRB_CHG = "0" *) 
+  (* C_EN_SAFETY_CKT = "0" *) 
+  (* C_EN_SHUTDOWN_PIN = "0" *) 
+  (* C_EN_SLEEP_PIN = "0" *) 
+  (* C_EST_POWER_SUMMARY = "Estimated Power for IP     :     5.7617 mW" *) 
+  (* C_FAMILY = "artix7" *) 
+  (* C_HAS_AXI_ID = "0" *) 
+  (* C_HAS_ENA = "0" *) 
+  (* C_HAS_ENB = "0" *) 
+  (* C_HAS_INJECTERR = "0" *) 
+  (* C_HAS_MEM_OUTPUT_REGS_A = "1" *) 
+  (* C_HAS_MEM_OUTPUT_REGS_B = "0" *) 
+  (* C_HAS_MUX_OUTPUT_REGS_A = "0" *) 
+  (* C_HAS_MUX_OUTPUT_REGS_B = "0" *) 
+  (* C_HAS_REGCEA = "0" *) 
+  (* C_HAS_REGCEB = "0" *) 
+  (* C_HAS_RSTA = "0" *) 
+  (* C_HAS_RSTB = "0" *) 
+  (* C_HAS_SOFTECC_INPUT_REGS_A = "0" *) 
+  (* C_HAS_SOFTECC_OUTPUT_REGS_B = "0" *) 
+  (* C_INITA_VAL = "0" *) 
+  (* C_INITB_VAL = "0" *) 
+  (* C_INIT_FILE = "photo.mem" *) 
+  (* C_INIT_FILE_NAME = "photo.mif" *) 
+  (* C_INTERFACE_TYPE = "0" *) 
+  (* C_LOAD_INIT_FILE = "1" *) 
+  (* C_MEM_TYPE = "3" *) 
+  (* C_MUX_PIPELINE_STAGES = "0" *) 
+  (* C_PRIM_TYPE = "1" *) 
+  (* C_READ_DEPTH_A = "14402" *) 
+  (* C_READ_DEPTH_B = "14402" *) 
+  (* C_READ_WIDTH_A = "12" *) 
+  (* C_READ_WIDTH_B = "12" *) 
+  (* C_RSTRAM_A = "0" *) 
+  (* C_RSTRAM_B = "0" *) 
+  (* C_RST_PRIORITY_A = "CE" *) 
+  (* C_RST_PRIORITY_B = "CE" *) 
+  (* C_SIM_COLLISION_CHECK = "ALL" *) 
+  (* C_USE_BRAM_BLOCK = "0" *) 
+  (* C_USE_BYTE_WEA = "0" *) 
+  (* C_USE_BYTE_WEB = "0" *) 
+  (* C_USE_DEFAULT_DATA = "0" *) 
+  (* C_USE_ECC = "0" *) 
+  (* C_USE_SOFTECC = "0" *) 
+  (* C_USE_URAM = "0" *) 
+  (* C_WEA_WIDTH = "1" *) 
+  (* C_WEB_WIDTH = "1" *) 
+  (* C_WRITE_DEPTH_A = "14402" *) 
+  (* C_WRITE_DEPTH_B = "14402" *) 
+  (* C_WRITE_MODE_A = "WRITE_FIRST" *) 
+  (* C_WRITE_MODE_B = "WRITE_FIRST" *) 
+  (* C_WRITE_WIDTH_A = "12" *) 
+  (* C_WRITE_WIDTH_B = "12" *) 
+  (* C_XDEVICEFAMILY = "artix7" *) 
+  (* KEEP_HIERARCHY = "true" *) 
+  (* downgradeipidentifiedwarnings = "yes" *) 
+  photo_blk_mem_gen_v8_3_3 U0
+       (.addra(addra),
+        .addrb({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .clka(clka),
+        .clkb(1'b0),
+        .dbiterr(NLW_U0_dbiterr_UNCONNECTED),
+        .deepsleep(1'b0),
+        .dina({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .dinb({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .douta(douta),
+        .doutb(NLW_U0_doutb_UNCONNECTED[11:0]),
+        .eccpipece(1'b0),
+        .ena(1'b0),
+        .enb(1'b0),
+        .injectdbiterr(1'b0),
+        .injectsbiterr(1'b0),
+        .rdaddrecc(NLW_U0_rdaddrecc_UNCONNECTED[13:0]),
+        .regcea(1'b0),
+        .regceb(1'b0),
+        .rsta(1'b0),
+        .rsta_busy(NLW_U0_rsta_busy_UNCONNECTED),
+        .rstb(1'b0),
+        .rstb_busy(NLW_U0_rstb_busy_UNCONNECTED),
+        .s_aclk(1'b0),
+        .s_aresetn(1'b0),
+        .s_axi_araddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .s_axi_arburst({1'b0,1'b0}),
+        .s_axi_arid({1'b0,1'b0,1'b0,1'b0}),
+        .s_axi_arlen({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .s_axi_arready(NLW_U0_s_axi_arready_UNCONNECTED),
+        .s_axi_arsize({1'b0,1'b0,1'b0}),
+        .s_axi_arvalid(1'b0),
+        .s_axi_awaddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .s_axi_awburst({1'b0,1'b0}),
+        .s_axi_awid({1'b0,1'b0,1'b0,1'b0}),
+        .s_axi_awlen({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .s_axi_awready(NLW_U0_s_axi_awready_UNCONNECTED),
+        .s_axi_awsize({1'b0,1'b0,1'b0}),
+        .s_axi_awvalid(1'b0),
+        .s_axi_bid(NLW_U0_s_axi_bid_UNCONNECTED[3:0]),
+        .s_axi_bready(1'b0),
+        .s_axi_bresp(NLW_U0_s_axi_bresp_UNCONNECTED[1:0]),
+        .s_axi_bvalid(NLW_U0_s_axi_bvalid_UNCONNECTED),
+        .s_axi_dbiterr(NLW_U0_s_axi_dbiterr_UNCONNECTED),
+        .s_axi_injectdbiterr(1'b0),
+        .s_axi_injectsbiterr(1'b0),
+        .s_axi_rdaddrecc(NLW_U0_s_axi_rdaddrecc_UNCONNECTED[13:0]),
+        .s_axi_rdata(NLW_U0_s_axi_rdata_UNCONNECTED[11:0]),
+        .s_axi_rid(NLW_U0_s_axi_rid_UNCONNECTED[3:0]),
+        .s_axi_rlast(NLW_U0_s_axi_rlast_UNCONNECTED),
+        .s_axi_rready(1'b0),
+        .s_axi_rresp(NLW_U0_s_axi_rresp_UNCONNECTED[1:0]),
+        .s_axi_rvalid(NLW_U0_s_axi_rvalid_UNCONNECTED),
+        .s_axi_sbiterr(NLW_U0_s_axi_sbiterr_UNCONNECTED),
+        .s_axi_wdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .s_axi_wlast(1'b0),
+        .s_axi_wready(NLW_U0_s_axi_wready_UNCONNECTED),
+        .s_axi_wstrb(1'b0),
+        .s_axi_wvalid(1'b0),
+        .sbiterr(NLW_U0_sbiterr_UNCONNECTED),
+        .shutdown(1'b0),
+        .sleep(1'b0),
+        .wea(1'b0),
+        .web(1'b0));
+endmodule
+
+(* ORIG_REF_NAME = "bindec" *) 
+module photo_bindec
+   (ena_array,
+    ram_ena,
+    addra);
+  output [0:0]ena_array;
+  output ram_ena;
+  input [1:0]addra;
+
+  wire [1:0]addra;
+  wire [0:0]ena_array;
+  wire ram_ena;
+
+  LUT2 #(
+    .INIT(4'h1)) 
+    \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_i_1 
+       (.I0(addra[1]),
+        .I1(addra[0]),
+        .O(ena_array));
+  LUT2 #(
+    .INIT(4'h8)) 
+    \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_i_1__0 
+       (.I0(addra[1]),
+        .I1(addra[0]),
+        .O(ram_ena));
+endmodule
+
+(* ORIG_REF_NAME = "blk_mem_gen_generic_cstr" *) 
+module photo_blk_mem_gen_generic_cstr
+   (douta,
+    addra,
+    clka);
+  output [11:0]douta;
+  input [13:0]addra;
+  input clka;
+
+  wire [13:0]addra;
+  wire clka;
+  wire [11:0]douta;
+  wire [0:0]ena_array;
+  wire ram_ena;
+  wire \ramloop[2].ram.r_n_0 ;
+  wire \ramloop[2].ram.r_n_1 ;
+  wire \ramloop[2].ram.r_n_2 ;
+  wire \ramloop[2].ram.r_n_3 ;
+  wire \ramloop[2].ram.r_n_4 ;
+  wire \ramloop[2].ram.r_n_5 ;
+  wire \ramloop[2].ram.r_n_6 ;
+  wire \ramloop[2].ram.r_n_7 ;
+  wire \ramloop[2].ram.r_n_8 ;
+  wire \ramloop[3].ram.r_n_0 ;
+  wire \ramloop[3].ram.r_n_1 ;
+  wire \ramloop[3].ram.r_n_2 ;
+  wire \ramloop[3].ram.r_n_3 ;
+  wire \ramloop[3].ram.r_n_4 ;
+  wire \ramloop[3].ram.r_n_5 ;
+  wire \ramloop[3].ram.r_n_6 ;
+  wire \ramloop[3].ram.r_n_7 ;
+  wire \ramloop[3].ram.r_n_8 ;
+  wire \ramloop[4].ram.r_n_0 ;
+  wire \ramloop[4].ram.r_n_1 ;
+  wire \ramloop[4].ram.r_n_2 ;
+  wire \ramloop[4].ram.r_n_3 ;
+  wire \ramloop[4].ram.r_n_4 ;
+  wire \ramloop[4].ram.r_n_5 ;
+  wire \ramloop[4].ram.r_n_6 ;
+  wire \ramloop[4].ram.r_n_7 ;
+  wire \ramloop[4].ram.r_n_8 ;
+  wire \ramloop[5].ram.r_n_0 ;
+  wire \ramloop[5].ram.r_n_1 ;
+  wire \ramloop[5].ram.r_n_2 ;
+  wire \ramloop[5].ram.r_n_3 ;
+  wire \ramloop[5].ram.r_n_4 ;
+  wire \ramloop[5].ram.r_n_5 ;
+  wire \ramloop[5].ram.r_n_6 ;
+  wire \ramloop[5].ram.r_n_7 ;
+  wire \ramloop[5].ram.r_n_8 ;
+
+  photo_bindec \bindec_a.bindec_inst_a 
+       (.addra(addra[13:12]),
+        .ena_array(ena_array),
+        .ram_ena(ram_ena));
+  photo_blk_mem_gen_mux \has_mux_a.A 
+       (.\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram ({\ramloop[3].ram.r_n_0 ,\ramloop[3].ram.r_n_1 ,\ramloop[3].ram.r_n_2 ,\ramloop[3].ram.r_n_3 ,\ramloop[3].ram.r_n_4 ,\ramloop[3].ram.r_n_5 ,\ramloop[3].ram.r_n_6 ,\ramloop[3].ram.r_n_7 }),
+        .\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_0 ({\ramloop[4].ram.r_n_0 ,\ramloop[4].ram.r_n_1 ,\ramloop[4].ram.r_n_2 ,\ramloop[4].ram.r_n_3 ,\ramloop[4].ram.r_n_4 ,\ramloop[4].ram.r_n_5 ,\ramloop[4].ram.r_n_6 ,\ramloop[4].ram.r_n_7 }),
+        .\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_1 ({\ramloop[2].ram.r_n_0 ,\ramloop[2].ram.r_n_1 ,\ramloop[2].ram.r_n_2 ,\ramloop[2].ram.r_n_3 ,\ramloop[2].ram.r_n_4 ,\ramloop[2].ram.r_n_5 ,\ramloop[2].ram.r_n_6 ,\ramloop[2].ram.r_n_7 }),
+        .\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_2 (\ramloop[3].ram.r_n_8 ),
+        .\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_3 (\ramloop[4].ram.r_n_8 ),
+        .\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_4 (\ramloop[2].ram.r_n_8 ),
+        .DOADO({\ramloop[5].ram.r_n_0 ,\ramloop[5].ram.r_n_1 ,\ramloop[5].ram.r_n_2 ,\ramloop[5].ram.r_n_3 ,\ramloop[5].ram.r_n_4 ,\ramloop[5].ram.r_n_5 ,\ramloop[5].ram.r_n_6 ,\ramloop[5].ram.r_n_7 }),
+        .DOPADOP(\ramloop[5].ram.r_n_8 ),
+        .addra(addra[13:12]),
+        .clka(clka),
+        .douta(douta[11:3]));
+  photo_blk_mem_gen_prim_width \ramloop[0].ram.r 
+       (.addra(addra),
+        .clka(clka),
+        .douta(douta[0]));
+  photo_blk_mem_gen_prim_width__parameterized0 \ramloop[1].ram.r 
+       (.addra(addra),
+        .clka(clka),
+        .douta(douta[2:1]));
+  photo_blk_mem_gen_prim_width__parameterized1 \ramloop[2].ram.r 
+       (.addra(addra[11:0]),
+        .clka(clka),
+        .\douta[10] ({\ramloop[2].ram.r_n_0 ,\ramloop[2].ram.r_n_1 ,\ramloop[2].ram.r_n_2 ,\ramloop[2].ram.r_n_3 ,\ramloop[2].ram.r_n_4 ,\ramloop[2].ram.r_n_5 ,\ramloop[2].ram.r_n_6 ,\ramloop[2].ram.r_n_7 }),
+        .\douta[11] (\ramloop[2].ram.r_n_8 ),
+        .ena_array(ena_array));
+  photo_blk_mem_gen_prim_width__parameterized2 \ramloop[3].ram.r 
+       (.addra(addra),
+        .clka(clka),
+        .\douta[10] ({\ramloop[3].ram.r_n_0 ,\ramloop[3].ram.r_n_1 ,\ramloop[3].ram.r_n_2 ,\ramloop[3].ram.r_n_3 ,\ramloop[3].ram.r_n_4 ,\ramloop[3].ram.r_n_5 ,\ramloop[3].ram.r_n_6 ,\ramloop[3].ram.r_n_7 }),
+        .\douta[11] (\ramloop[3].ram.r_n_8 ));
+  photo_blk_mem_gen_prim_width__parameterized3 \ramloop[4].ram.r 
+       (.addra(addra),
+        .clka(clka),
+        .\douta[10] ({\ramloop[4].ram.r_n_0 ,\ramloop[4].ram.r_n_1 ,\ramloop[4].ram.r_n_2 ,\ramloop[4].ram.r_n_3 ,\ramloop[4].ram.r_n_4 ,\ramloop[4].ram.r_n_5 ,\ramloop[4].ram.r_n_6 ,\ramloop[4].ram.r_n_7 }),
+        .\douta[11] (\ramloop[4].ram.r_n_8 ));
+  photo_blk_mem_gen_prim_width__parameterized4 \ramloop[5].ram.r 
+       (.DOADO({\ramloop[5].ram.r_n_0 ,\ramloop[5].ram.r_n_1 ,\ramloop[5].ram.r_n_2 ,\ramloop[5].ram.r_n_3 ,\ramloop[5].ram.r_n_4 ,\ramloop[5].ram.r_n_5 ,\ramloop[5].ram.r_n_6 ,\ramloop[5].ram.r_n_7 }),
+        .DOPADOP(\ramloop[5].ram.r_n_8 ),
+        .addra(addra[11:0]),
+        .clka(clka),
+        .ram_ena(ram_ena));
+endmodule
+
+(* ORIG_REF_NAME = "blk_mem_gen_mux" *) 
+module photo_blk_mem_gen_mux
+   (douta,
+    addra,
+    clka,
+    DOADO,
+    \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram ,
+    \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_0 ,
+    \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_1 ,
+    DOPADOP,
+    \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_2 ,
+    \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_3 ,
+    \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_4 );
+  output [8:0]douta;
+  input [1:0]addra;
+  input clka;
+  input [7:0]DOADO;
+  input [7:0]\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram ;
+  input [7:0]\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_0 ;
+  input [7:0]\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_1 ;
+  input [0:0]DOPADOP;
+  input [0:0]\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_2 ;
+  input [0:0]\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_3 ;
+  input [0:0]\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_4 ;
+
+  wire [7:0]\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram ;
+  wire [7:0]\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_0 ;
+  wire [7:0]\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_1 ;
+  wire [0:0]\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_2 ;
+  wire [0:0]\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_3 ;
+  wire [0:0]\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_4 ;
+  wire [7:0]DOADO;
+  wire [0:0]DOPADOP;
+  wire [1:0]addra;
+  wire clka;
+  wire [8:0]douta;
+  wire [1:0]sel_pipe;
+  wire [1:0]sel_pipe_d1;
+
+  LUT6 #(
+    .INIT(64'hAACCAACCF0FFF000)) 
+    \douta[10]_INST_0 
+       (.I0(DOADO[7]),
+        .I1(\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram [7]),
+        .I2(\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_0 [7]),
+        .I3(sel_pipe_d1[1]),
+        .I4(\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_1 [7]),
+        .I5(sel_pipe_d1[0]),
+        .O(douta[7]));
+  LUT6 #(
+    .INIT(64'hAACCAACCF0FFF000)) 
+    \douta[11]_INST_0 
+       (.I0(DOPADOP),
+        .I1(\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_2 ),
+        .I2(\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_3 ),
+        .I3(sel_pipe_d1[1]),
+        .I4(\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_4 ),
+        .I5(sel_pipe_d1[0]),
+        .O(douta[8]));
+  LUT6 #(
+    .INIT(64'hAACCAACCF0FFF000)) 
+    \douta[3]_INST_0 
+       (.I0(DOADO[0]),
+        .I1(\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram [0]),
+        .I2(\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_0 [0]),
+        .I3(sel_pipe_d1[1]),
+        .I4(\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_1 [0]),
+        .I5(sel_pipe_d1[0]),
+        .O(douta[0]));
+  LUT6 #(
+    .INIT(64'hAACCAACCF0FFF000)) 
+    \douta[4]_INST_0 
+       (.I0(DOADO[1]),
+        .I1(\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram [1]),
+        .I2(\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_0 [1]),
+        .I3(sel_pipe_d1[1]),
+        .I4(\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_1 [1]),
+        .I5(sel_pipe_d1[0]),
+        .O(douta[1]));
+  LUT6 #(
+    .INIT(64'hAACCAACCF0FFF000)) 
+    \douta[5]_INST_0 
+       (.I0(DOADO[2]),
+        .I1(\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram [2]),
+        .I2(\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_0 [2]),
+        .I3(sel_pipe_d1[1]),
+        .I4(\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_1 [2]),
+        .I5(sel_pipe_d1[0]),
+        .O(douta[2]));
+  LUT6 #(
+    .INIT(64'hAACCAACCF0FFF000)) 
+    \douta[6]_INST_0 
+       (.I0(DOADO[3]),
+        .I1(\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram [3]),
+        .I2(\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_0 [3]),
+        .I3(sel_pipe_d1[1]),
+        .I4(\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_1 [3]),
+        .I5(sel_pipe_d1[0]),
+        .O(douta[3]));
+  LUT6 #(
+    .INIT(64'hAACCAACCF0FFF000)) 
+    \douta[7]_INST_0 
+       (.I0(DOADO[4]),
+        .I1(\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram [4]),
+        .I2(\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_0 [4]),
+        .I3(sel_pipe_d1[1]),
+        .I4(\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_1 [4]),
+        .I5(sel_pipe_d1[0]),
+        .O(douta[4]));
+  LUT6 #(
+    .INIT(64'hAACCAACCF0FFF000)) 
+    \douta[8]_INST_0 
+       (.I0(DOADO[5]),
+        .I1(\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram [5]),
+        .I2(\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_0 [5]),
+        .I3(sel_pipe_d1[1]),
+        .I4(\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_1 [5]),
+        .I5(sel_pipe_d1[0]),
+        .O(douta[5]));
+  LUT6 #(
+    .INIT(64'hAACCAACCF0FFF000)) 
+    \douta[9]_INST_0 
+       (.I0(DOADO[6]),
+        .I1(\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram [6]),
+        .I2(\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_0 [6]),
+        .I3(sel_pipe_d1[1]),
+        .I4(\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_1 [6]),
+        .I5(sel_pipe_d1[0]),
+        .O(douta[6]));
+  FDRE #(
+    .INIT(1'b0)) 
+    \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[0] 
+       (.C(clka),
+        .CE(1'b1),
+        .D(sel_pipe[0]),
+        .Q(sel_pipe_d1[0]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[1] 
+       (.C(clka),
+        .CE(1'b1),
+        .D(sel_pipe[1]),
+        .Q(sel_pipe_d1[1]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \no_softecc_sel_reg.ce_pri.sel_pipe_reg[0] 
+       (.C(clka),
+        .CE(1'b1),
+        .D(addra[0]),
+        .Q(sel_pipe[0]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \no_softecc_sel_reg.ce_pri.sel_pipe_reg[1] 
+       (.C(clka),
+        .CE(1'b1),
+        .D(addra[1]),
+        .Q(sel_pipe[1]),
+        .R(1'b0));
+endmodule
+
+(* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
+module photo_blk_mem_gen_prim_width
+   (douta,
+    clka,
+    addra);
+  output [0:0]douta;
+  input clka;
+  input [13:0]addra;
+
+  wire [13:0]addra;
+  wire clka;
+  wire [0:0]douta;
+
+  photo_blk_mem_gen_prim_wrapper_init \prim_init.ram 
+       (.addra(addra),
+        .clka(clka),
+        .douta(douta));
+endmodule
+
+(* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
+module photo_blk_mem_gen_prim_width__parameterized0
+   (douta,
+    clka,
+    addra);
+  output [1:0]douta;
+  input clka;
+  input [13:0]addra;
+
+  wire [13:0]addra;
+  wire clka;
+  wire [1:0]douta;
+
+  photo_blk_mem_gen_prim_wrapper_init__parameterized0 \prim_init.ram 
+       (.addra(addra),
+        .clka(clka),
+        .douta(douta));
+endmodule
+
+(* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
+module photo_blk_mem_gen_prim_width__parameterized1
+   (\douta[10] ,
+    \douta[11] ,
+    clka,
+    ena_array,
+    addra);
+  output [7:0]\douta[10] ;
+  output [0:0]\douta[11] ;
+  input clka;
+  input [0:0]ena_array;
+  input [11:0]addra;
+
+  wire [11:0]addra;
+  wire clka;
+  wire [7:0]\douta[10] ;
+  wire [0:0]\douta[11] ;
+  wire [0:0]ena_array;
+
+  photo_blk_mem_gen_prim_wrapper_init__parameterized1 \prim_init.ram 
+       (.addra(addra),
+        .clka(clka),
+        .\douta[10] (\douta[10] ),
+        .\douta[11] (\douta[11] ),
+        .ena_array(ena_array));
+endmodule
+
+(* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
+module photo_blk_mem_gen_prim_width__parameterized2
+   (\douta[10] ,
+    \douta[11] ,
+    clka,
+    addra);
+  output [7:0]\douta[10] ;
+  output [0:0]\douta[11] ;
+  input clka;
+  input [13:0]addra;
+
+  wire [13:0]addra;
+  wire clka;
+  wire [7:0]\douta[10] ;
+  wire [0:0]\douta[11] ;
+
+  photo_blk_mem_gen_prim_wrapper_init__parameterized2 \prim_init.ram 
+       (.addra(addra),
+        .clka(clka),
+        .\douta[10] (\douta[10] ),
+        .\douta[11] (\douta[11] ));
+endmodule
+
+(* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
+module photo_blk_mem_gen_prim_width__parameterized3
+   (\douta[10] ,
+    \douta[11] ,
+    clka,
+    addra);
+  output [7:0]\douta[10] ;
+  output [0:0]\douta[11] ;
+  input clka;
+  input [13:0]addra;
+
+  wire [13:0]addra;
+  wire clka;
+  wire [7:0]\douta[10] ;
+  wire [0:0]\douta[11] ;
+
+  photo_blk_mem_gen_prim_wrapper_init__parameterized3 \prim_init.ram 
+       (.addra(addra),
+        .clka(clka),
+        .\douta[10] (\douta[10] ),
+        .\douta[11] (\douta[11] ));
+endmodule
+
+(* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
+module photo_blk_mem_gen_prim_width__parameterized4
+   (DOADO,
+    DOPADOP,
+    clka,
+    ram_ena,
+    addra);
+  output [7:0]DOADO;
+  output [0:0]DOPADOP;
+  input clka;
+  input ram_ena;
+  input [11:0]addra;
+
+  wire [7:0]DOADO;
+  wire [0:0]DOPADOP;
+  wire [11:0]addra;
+  wire clka;
+  wire ram_ena;
+
+  photo_blk_mem_gen_prim_wrapper_init__parameterized4 \prim_init.ram 
+       (.DOADO(DOADO),
+        .DOPADOP(DOPADOP),
+        .addra(addra),
+        .clka(clka),
+        .ram_ena(ram_ena));
+endmodule
+
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module photo_blk_mem_gen_prim_wrapper_init
+   (douta,
+    clka,
+    addra);
+  output [0:0]douta;
+  input clka;
+  input [13:0]addra;
+
+  wire [13:0]addra;
+  wire clka;
+  wire [0:0]douta;
+  wire [15:1]\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_DOADO_UNCONNECTED ;
+  wire [15:0]\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_DOBDO_UNCONNECTED ;
+  wire [1:0]\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_DOPADOP_UNCONNECTED ;
+  wire [1:0]\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_DOPBDOP_UNCONNECTED ;
+
+  (* CLOCK_DOMAINS = "COMMON" *) 
+  (* box_type = "PRIMITIVE" *) 
+  RAMB18E1 #(
+    .DOA_REG(1),
+    .DOB_REG(0),
+    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_07(256'h0000000000000400040004000000000000000000000000000000000000000000),
+    .INIT_08(256'h0000000000000000020001000000000000000000000000000000000800000000),
+    .INIT_09(256'h800000000000000000200020300000000000000000000000C000009068002000),
+    .INIT_0A(256'h600804000000000000000000080011000008000000000000000020040001C011),
+    .INIT_0B(256'h4000300600000000000000000000844000000020000000000000000000840800),
+    .INIT_0C(256'h0118004100400000000000000000000000001C00040000000000000000000084),
+    .INIT_0D(256'h0000000020003008040000000000000000000000001000040000000000000000),
+    .INIT_0E(256'h0000000000000000100450000000000000000000000000000000000000000000),
+    .INIT_0F(256'h000000000000004320804028200000000000000000000B200060001000000000),
+    .INIT_10(256'h00000000000000000002221F8040400000000000000000010220002C00D00000),
+    .INIT_11(256'h4C8000000000000000000080800824160000000000000000000082A080020C00),
+    .INIT_12(256'h20502080000000000000000020008000810D0400000000000000008000800800),
+    .INIT_13(256'h0000801020000000000000000000000210005020800000000000000000200B90),
+    .INIT_14(256'h0000000000000000000000000000000000100000100000000000000000000000),
+    .INIT_15(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_16(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_17(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_18(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_19(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_1A(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_1B(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_1C(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_1D(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_1E(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_1F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_20(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_21(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_22(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_23(256'h0000000400100000080000000000000010000800100000000000000000000000),
+    .INIT_24(256'h0000005000080014000048000000000000004000080010403E10000000000000),
+    .INIT_25(256'h0000000000400008001040500000000000000000400000000480064800000000),
+    .INIT_26(256'h00000000000000420000202180100C00000000000000406002101200100C0000),
+    .INIT_27(256'h100C0000000000000082203800188410AC000000000000000A00030000241028),
+    .INIT_28(256'h0100140C000000000000000A8040000000140C00000000000000028000080108),
+    .INIT_29(256'h2210000004080000000000000030800190010004080000000000000012806410),
+    .INIT_2A(256'h900010900008000C0000000000000089004C5040E0000C000000000000008080),
+    .INIT_2B(256'h0000040000304262050C00000000000000900000311404004C00000000000000),
+    .INIT_2C(256'h0000000102000000000040080000000000000100000020000A006C0000000000),
+    .INIT_2D(256'h000000000080340004A005004200000000000000014200008001404080000000),
+    .INIT_2E(256'h0200000000000000020010000050081000000000000000800003281420008A00),
+    .INIT_2F(256'h24650400000000000000500020020800400200000000000000100046C200480A),
+    .INIT_30(256'h0000000000000000000000000000000060080000000000000000003000001200),
+    .INIT_31(256'h000000000000000000000000000000C000000000000000000000000000008000),
+    .INIT_32(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_33(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_34(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_35(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_36(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_37(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_38(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_39(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_3A(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_3B(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_3C(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_3D(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_3E(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_3F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_A(18'h00000),
+    .INIT_B(18'h00000),
+    .INIT_FILE("NONE"),
+    .IS_CLKARDCLK_INVERTED(1'b0),
+    .IS_CLKBWRCLK_INVERTED(1'b0),
+    .IS_ENARDEN_INVERTED(1'b0),
+    .IS_ENBWREN_INVERTED(1'b0),
+    .IS_RSTRAMARSTRAM_INVERTED(1'b0),
+    .IS_RSTRAMB_INVERTED(1'b0),
+    .IS_RSTREGARSTREG_INVERTED(1'b0),
+    .IS_RSTREGB_INVERTED(1'b0),
+    .RAM_MODE("TDP"),
+    .RDADDR_COLLISION_HWCONFIG("PERFORMANCE"),
+    .READ_WIDTH_A(1),
+    .READ_WIDTH_B(1),
+    .RSTREG_PRIORITY_A("REGCE"),
+    .RSTREG_PRIORITY_B("REGCE"),
+    .SIM_COLLISION_CHECK("ALL"),
+    .SIM_DEVICE("7SERIES"),
+    .SRVAL_A(18'h00000),
+    .SRVAL_B(18'h00000),
+    .WRITE_MODE_A("WRITE_FIRST"),
+    .WRITE_MODE_B("WRITE_FIRST"),
+    .WRITE_WIDTH_A(1),
+    .WRITE_WIDTH_B(1)) 
+    \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram 
+       (.ADDRARDADDR(addra),
+        .ADDRBWRADDR({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .CLKARDCLK(clka),
+        .CLKBWRCLK(clka),
+        .DIADI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .DIBDI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .DIPADIP({1'b0,1'b0}),
+        .DIPBDIP({1'b0,1'b0}),
+        .DOADO({\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_DOADO_UNCONNECTED [15:1],douta}),
+        .DOBDO(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_DOBDO_UNCONNECTED [15:0]),
+        .DOPADOP(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_DOPADOP_UNCONNECTED [1:0]),
+        .DOPBDOP(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_DOPBDOP_UNCONNECTED [1:0]),
+        .ENARDEN(1'b1),
+        .ENBWREN(1'b0),
+        .REGCEAREGCE(1'b1),
+        .REGCEB(1'b0),
+        .RSTRAMARSTRAM(1'b0),
+        .RSTRAMB(1'b0),
+        .RSTREGARSTREG(1'b0),
+        .RSTREGB(1'b0),
+        .WEA({1'b0,1'b0}),
+        .WEBWE({1'b0,1'b0,1'b0,1'b0}));
+endmodule
+
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module photo_blk_mem_gen_prim_wrapper_init__parameterized0
+   (douta,
+    clka,
+    addra);
+  output [1:0]douta;
+  input clka;
+  input [13:0]addra;
+
+  wire [13:0]addra;
+  wire clka;
+  wire [1:0]douta;
+  wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
+  wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
+  wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DBITERR_UNCONNECTED ;
+  wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_SBITERR_UNCONNECTED ;
+  wire [31:2]\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOADO_UNCONNECTED ;
+  wire [31:0]\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOBDO_UNCONNECTED ;
+  wire [3:0]\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOPADOP_UNCONNECTED ;
+  wire [3:0]\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOPBDOP_UNCONNECTED ;
+  wire [7:0]\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED ;
+  wire [8:0]\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED ;
+
+  (* CLOCK_DOMAINS = "COMMON" *) 
+  (* box_type = "PRIMITIVE" *) 
+  RAMB36E1 #(
+    .DOA_REG(1),
+    .DOB_REG(0),
+    .EN_ECC_READ("FALSE"),
+    .EN_ECC_WRITE("FALSE"),
+    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_0F(256'h0000000000000000000000000000000000040000000000000000000000000000),
+    .INIT_10(256'h0000000000000000000000000000001010000014000000100000000000000000),
+    .INIT_11(256'h0000000000000000000000000000000000101000001400000050000000000000),
+    .INIT_12(256'h0000000000000000000000000000000000000014100014554100005010000000),
+    .INIT_13(256'h1500000000000000000000000000000000005000001410001055554000501400),
+    .INIT_14(256'h0555550000000000000000000000000000000000500054041400001400000454),
+    .INIT_15(256'h4000001015400000000000000000000000000000000050015504150000140000),
+    .INIT_16(256'h1555550000101000000000000000000000000000000000005001014415001555),
+    .INIT_17(256'h0540000000000000100000000000000000000000000000000000500100040540),
+    .INIT_18(256'h4004054000040000000410000000000000000000000000000000000050010004),
+    .INIT_19(256'h5000500005400554140005555000000000000000000000000000000000005001),
+    .INIT_1A(256'h0000500051400400140004005555554000000000000000000000000000000000),
+    .INIT_1B(256'h0000000050000140000014000000001015400000000000000000000000000000),
+    .INIT_1C(256'h0000000000005000014000001555550000501540000000000000000000000000),
+    .INIT_1D(256'h0000000000000000500001400000155554000040040000000000000000000000),
+    .INIT_1E(256'h0000000000000000000050000100000001414000014004000000000000000000),
+    .INIT_1F(256'h0000000000000000000000005000410000000141400001040100000000000000),
+    .INIT_20(256'h0000000000000000000000000000500041010001555550000504000000000000),
+    .INIT_21(256'h0000000000000000000000000000000050014101000154001550040400000000),
+    .INIT_22(256'h1014000000000000000000000000000000000001010100010000015054041000),
+    .INIT_23(256'h4104111400000000000000000000000000000000000101010400051540015040),
+    .INIT_24(256'h1400010451040000000000000000000000000000000010010101040015155401),
+    .INIT_25(256'h1000040001051100000000000000000000000000000000005001010104001400),
+    .INIT_26(256'h0400140004000104100000000000000000000000000000000000500001000400),
+    .INIT_27(256'h0150050015555400010010000000000000000000000000000000000050000150),
+    .INIT_28(256'h0000005005001555540000001000000000000000000000000000000000000000),
+    .INIT_29(256'h0000000000000400050054000000000000000000000000000000000000000000),
+    .INIT_2A(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_2B(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_2C(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_2D(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_2E(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_2F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_30(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_31(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_32(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_33(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_34(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_35(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_36(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_37(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_38(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_39(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_3A(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_3B(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_3C(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_3D(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_3E(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_3F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_40(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_41(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_42(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_43(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_44(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_45(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_46(256'h0400000000000000004000000000000000000000000000000000000000000000),
+    .INIT_47(256'h0000050000000040000000400400000000000000000000000000000000000000),
+    .INIT_48(256'h0000000005000000101000000040040000000040000000000000000000000000),
+    .INIT_49(256'h0000000000000400000050100000004014000555410000000000000000000000),
+    .INIT_4A(256'h0000000000005000040000005010000000401400050141000000000000000000),
+    .INIT_4B(256'h0000000000000000500004000000501000000050000004000000000000000000),
+    .INIT_4C(256'h0000000000000000000050000401400000500000005000000400000000000000),
+    .INIT_4D(256'h0000000000000000000000005000040155000555414001540000040040000000),
+    .INIT_4E(256'h1000000000000000000000000000500015115500055055401555514004155010),
+    .INIT_4F(256'h0414000000000000000000000000000050001550500000101540141515400415),
+    .INIT_50(256'h0000040404000000000000000000000000005000555010000000010000040000),
+    .INIT_51(256'h0004000004040400000000000000000000000000500155101000000001000004),
+    .INIT_52(256'h0400000400000404040000000000000000000000000050014410100000000000),
+    .INIT_53(256'h1011540000050000040404000000000000000000000000005001400010001410),
+    .INIT_54(256'h5000040144000555000004040400000000000000000000000000500101001000),
+    .INIT_55(256'h0041540004410400555555000415040000000000000000000000000050010100),
+    .INIT_56(256'h5001004155400541000054055540045544000000000000000000000000005001),
+    .INIT_57(256'h0000500140415540054100004001415004405400000000000000000000000000),
+    .INIT_58(256'h0000000050004050054005410100000140100440000000000000000000000000),
+    .INIT_59(256'h0000000000000000401001400541010000014000044000100000000000000000),
+    .INIT_5A(256'h0000000000000000000040100000054101000000400004450010000000000000),
+    .INIT_5B(256'h0000000000000000000010005004000005411100004050000441551000000000),
+    .INIT_5C(256'h0000000000000000000000005000150400000550510000405000144015100000),
+    .INIT_5D(256'h0010000000000000000000000000500015010000041451400540040014100014),
+    .INIT_5E(256'h0415001000000000000000000000000050001401000004000150154005001411),
+    .INIT_5F(256'h0140000400000000000000000000000000005000040140011000015015000540),
+    .INIT_60(256'h0000000000000000000000000000000000000000000000015001500000501500),
+    .INIT_61(256'h0000000000000000000000000000000000000000000000000000500150000000),
+    .INIT_62(256'h4000000000000000000000000000000000000000000000000000000010004000),
+    .INIT_63(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_64(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_65(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_66(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_67(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_68(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_69(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_6A(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_6B(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_6C(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_6D(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_6E(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_6F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_70(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_71(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_72(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_73(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_74(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_75(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_76(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_77(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_78(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_79(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_7A(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_7B(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_7C(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_7D(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_7E(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_7F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_A(36'h000000000),
+    .INIT_B(36'h000000000),
+    .INIT_FILE("NONE"),
+    .IS_CLKARDCLK_INVERTED(1'b0),
+    .IS_CLKBWRCLK_INVERTED(1'b0),
+    .IS_ENARDEN_INVERTED(1'b0),
+    .IS_ENBWREN_INVERTED(1'b0),
+    .IS_RSTRAMARSTRAM_INVERTED(1'b0),
+    .IS_RSTRAMB_INVERTED(1'b0),
+    .IS_RSTREGARSTREG_INVERTED(1'b0),
+    .IS_RSTREGB_INVERTED(1'b0),
+    .RAM_EXTENSION_A("NONE"),
+    .RAM_EXTENSION_B("NONE"),
+    .RAM_MODE("TDP"),
+    .RDADDR_COLLISION_HWCONFIG("PERFORMANCE"),
+    .READ_WIDTH_A(2),
+    .READ_WIDTH_B(2),
+    .RSTREG_PRIORITY_A("REGCE"),
+    .RSTREG_PRIORITY_B("REGCE"),
+    .SIM_COLLISION_CHECK("ALL"),
+    .SIM_DEVICE("7SERIES"),
+    .SRVAL_A(36'h000000000),
+    .SRVAL_B(36'h000000000),
+    .WRITE_MODE_A("WRITE_FIRST"),
+    .WRITE_MODE_B("WRITE_FIRST"),
+    .WRITE_WIDTH_A(2),
+    .WRITE_WIDTH_B(2)) 
+    \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram 
+       (.ADDRARDADDR({1'b1,addra,1'b1}),
+        .ADDRBWRADDR({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .CASCADEINA(1'b0),
+        .CASCADEINB(1'b0),
+        .CASCADEOUTA(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ),
+        .CASCADEOUTB(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ),
+        .CLKARDCLK(clka),
+        .CLKBWRCLK(clka),
+        .DBITERR(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DBITERR_UNCONNECTED ),
+        .DIADI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .DIBDI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .DIPADIP({1'b0,1'b0,1'b0,1'b0}),
+        .DIPBDIP({1'b0,1'b0,1'b0,1'b0}),
+        .DOADO({\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOADO_UNCONNECTED [31:2],douta}),
+        .DOBDO(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOBDO_UNCONNECTED [31:0]),
+        .DOPADOP(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOPADOP_UNCONNECTED [3:0]),
+        .DOPBDOP(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOPBDOP_UNCONNECTED [3:0]),
+        .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
+        .ENARDEN(1'b1),
+        .ENBWREN(1'b0),
+        .INJECTDBITERR(1'b0),
+        .INJECTSBITERR(1'b0),
+        .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
+        .REGCEAREGCE(1'b1),
+        .REGCEB(1'b0),
+        .RSTRAMARSTRAM(1'b0),
+        .RSTRAMB(1'b0),
+        .RSTREGARSTREG(1'b0),
+        .RSTREGB(1'b0),
+        .SBITERR(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_SBITERR_UNCONNECTED ),
+        .WEA({1'b0,1'b0,1'b0,1'b0}),
+        .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
+endmodule
+
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module photo_blk_mem_gen_prim_wrapper_init__parameterized1
+   (\douta[10] ,
+    \douta[11] ,
+    clka,
+    ena_array,
+    addra);
+  output [7:0]\douta[10] ;
+  output [0:0]\douta[11] ;
+  input clka;
+  input [0:0]ena_array;
+  input [11:0]addra;
+
+  wire [11:0]addra;
+  wire clka;
+  wire [7:0]\douta[10] ;
+  wire [0:0]\douta[11] ;
+  wire [0:0]ena_array;
+  wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
+  wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
+  wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DBITERR_UNCONNECTED ;
+  wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_SBITERR_UNCONNECTED ;
+  wire [31:8]\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOADO_UNCONNECTED ;
+  wire [31:0]\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOBDO_UNCONNECTED ;
+  wire [3:1]\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOPADOP_UNCONNECTED ;
+  wire [3:0]\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOPBDOP_UNCONNECTED ;
+  wire [7:0]\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED ;
+  wire [8:0]\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED ;
+
+  (* CLOCK_DOMAINS = "COMMON" *) 
+  (* box_type = "PRIMITIVE" *) 
+  RAMB36E1 #(
+    .DOA_REG(1),
+    .DOB_REG(0),
+    .EN_ECC_READ("FALSE"),
+    .EN_ECC_WRITE("FALSE"),
+    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_07(256'h0000000000000400060000000000000000000000000000000000000000000000),
+    .INITP_08(256'h00000000000000000C4007000C00000000000000000000044006000C00000000),
+    .INITP_09(256'hF00000000000000000C006407FF80C600000000000000000C00640FFF00C4000),
+    .INITP_0A(256'hE00C780000000000000000C1F67006003FF80000000000000000C0E66006803F),
+    .INITP_0B(256'h78002006400000000000000000C106787FF004400000000000000000C19E787F),
+    .INITP_0C(256'hC1D0387EE07FC00000000000000000C18278060006400000000000000000C106),
+    .INITP_0D(256'h0000C0180060300C780000000000000000C0D8206030FFF80000000000000000),
+    .INITP_0E(256'h00000000C010007FF008600000000000000000C018007FF00C78000000000000),
+    .INITP_0F(256'h000000000000C09300998032300000000000000000C0130019E0182000000000),
+    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_13(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_14(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_15(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_16(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_17(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_18(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_19(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_1A(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_1B(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_1C(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_1D(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_1E(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_1F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_20(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_21(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_22(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_23(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_24(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_25(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_26(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_27(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_28(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_29(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_2A(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_2B(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_2C(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_2D(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_2E(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_2F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_30(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_31(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_32(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_33(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_34(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_35(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_36(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_37(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_38(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_39(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_3A(256'h0000000000000000000000000000000000000000000000000000000000404000),
+    .INIT_3B(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_3C(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_3D(256'h000000000082E40000000000000000000000000060E000000000000000000000),
+    .INIT_3E(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_3F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_40(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_41(256'h00E20000000000000000000000E2E200000000000000000000000000C2A20000),
+    .INIT_42(256'h0000000000000000000000000000000000000000000000000000000000E46000),
+    .INIT_43(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_44(256'h00000000E2820000004000000000000000000000000000000000000000000000),
+    .INIT_45(256'h0000000060E4C00000E40000000000000000000040E2E2020000000000000000),
+    .INIT_46(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_47(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_48(256'hE28282E4E200000000000000E2A2000000E4A000000000000000000000000000),
+    .INIT_49(256'h22224000000000000000000000E2A20020E4000000000000A2E4E282E2C2C2E2),
+    .INIT_4A(256'h0000000000000000000000000000000000000000000000000000000000000040),
+    .INIT_4B(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_4C(256'hA0A262A2E2C2C2E2E2E2E2E24200000000004020E2E2400040E2C20000000000),
+    .INIT_4D(256'h00000000000000E0E2E28000000000000020000000E2E20020E4800000000000),
+    .INIT_4E(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_4F(256'h82E2E26200000000000000000000000000000000000000000000000000000000),
+    .INIT_50(256'h00E462000000000000000000C0E2E2E022E080C02000000000C0E4C2E2C2E222),
+    .INIT_51(256'h000000000000000000000000000000C0E2E28000000000A0C2E2A2600062E400),
+    .INIT_52(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_53(256'h00E0E4E2E2C2E2E2E2C2C2E22220000000000000000000000000000000000000),
+    .INIT_54(256'hE2E2E2C26020E42000E2E242000000000020C0E0A0E2E2A00000000000000000),
+    .INIT_55(256'h0000000000000000000000000000000000000000000000C0E2E28000000000C2),
+    .INIT_56(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_57(256'hA22222A0000000000000000020E40000C0E2E2E2E4C000000000000000000000),
+    .INIT_58(256'hE2E28000000020E4420080E2E442E26000E2C2E20200000080E4E2E2E2C2C2E2),
+    .INIT_59(256'h00000000000000000000000000000000000000000000000000000000000000A0),
+    .INIT_5A(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_5B(256'h80E4E2E2E2E2E2E2E2E4E262000000000000000000E4400020E4C04060000000),
+    .INIT_5C(256'h0000000000000080E2E28000000020E4A000004000A2E26000A2E2E2A2000000),
+    .INIT_5D(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_5E(256'h20E4000000000000000000000000000000000000000000000000000000000000),
+    .INIT_5F(256'h0042E2E2C20000000000000000000000600042E0000000000000000000224200),
+    .INIT_60(256'h00000000000000000000000000000080E2E28000000000E4E00000000082E260),
+    .INIT_61(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_62(256'h000040606062A22000E400000000000000000000000000000000000000000000),
+    .INIT_63(256'h8200000000C0E4200000E2E2C2000000000060E0C042E2800040400000000000),
+    .INIT_64(256'h000000000000000000000000000000000000000000000080E2E26000000000E2),
+    .INIT_65(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_66(256'h00E4E46000000000E062E2E2E2E2E2E282A20000000000000000000000000000),
+    .INIT_67(256'hE2E24000000000A2E2A20082E200400000C0E2E2C20000000062E2E4E2E2E2E2),
+    .INIT_68(256'h0000000000000000000000000000000000000000000000000000000000000080),
+    .INIT_69(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_6A(256'h60E4E2000000000000C0E22200000000C2C2E2E2E2C2E2A2E2E2E2E2E4C00000),
+    .INIT_6B(256'h0000000000000060E2E22000000000C0E4E480E2E400000000A0820000000000),
+    .INIT_6C(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_6D(256'h60E2C2C2E2C00000000000000000000000000000000000000000000000000000),
+    .INIT_6E(256'h0040C0000000000060E2E2000080800000008242000000000000000042E40000),
+    .INIT_6F(256'h00000000000000000000000000000040E2E2000000000000000040E2E4000000),
+    .INIT_70(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_71(256'h00000000E262000000E2C2C28200000000000000000000000000000000000000),
+    .INIT_72(256'h000000E262000000000000000000000040E2E2C2E2E2E2E2E2C2E24200000000),
+    .INIT_73(256'h000000000000000000000000000000000000000000000040E2E2000000000000),
+    .INIT_74(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_75(256'hC2E2E2420000000000000080E4A0000000C2E2C0200000000000000000000000),
+    .INIT_76(256'hE2E2000000000000000000E4C2004060000000000000000000E2E2E2E2E2E2E2),
+    .INIT_77(256'h0000000000000000000000000000000000000000000000000000000000000040),
+    .INIT_78(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_79(256'h000000E2E20060C2E262620000000000000000E4A20000000000E4C000000000),
+    .INIT_7A(256'h0000000000000020E2E2000000000000000000E4400042220080E20000000000),
+    .INIT_7B(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_7C(256'hC02062E400000000000000000000000000000000000000000000000000000000),
+    .INIT_7D(256'h00C0800000000080006040E2E22000C2E2E0000000000000000082E2C000C200),
+    .INIT_7E(256'h00000000000000000000000000000020E2E20000000000A0E46020E440006222),
+    .INIT_7F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_A(36'h000000000),
+    .INIT_B(36'h000000000),
+    .INIT_FILE("NONE"),
+    .IS_CLKARDCLK_INVERTED(1'b0),
+    .IS_CLKBWRCLK_INVERTED(1'b0),
+    .IS_ENARDEN_INVERTED(1'b0),
+    .IS_ENBWREN_INVERTED(1'b0),
+    .IS_RSTRAMARSTRAM_INVERTED(1'b0),
+    .IS_RSTRAMB_INVERTED(1'b0),
+    .IS_RSTREGARSTREG_INVERTED(1'b0),
+    .IS_RSTREGB_INVERTED(1'b0),
+    .RAM_EXTENSION_A("NONE"),
+    .RAM_EXTENSION_B("NONE"),
+    .RAM_MODE("TDP"),
+    .RDADDR_COLLISION_HWCONFIG("PERFORMANCE"),
+    .READ_WIDTH_A(9),
+    .READ_WIDTH_B(9),
+    .RSTREG_PRIORITY_A("REGCE"),
+    .RSTREG_PRIORITY_B("REGCE"),
+    .SIM_COLLISION_CHECK("ALL"),
+    .SIM_DEVICE("7SERIES"),
+    .SRVAL_A(36'h000000000),
+    .SRVAL_B(36'h000000000),
+    .WRITE_MODE_A("WRITE_FIRST"),
+    .WRITE_MODE_B("WRITE_FIRST"),
+    .WRITE_WIDTH_A(9),
+    .WRITE_WIDTH_B(9)) 
+    \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram 
+       (.ADDRARDADDR({1'b1,addra,1'b1,1'b1,1'b1}),
+        .ADDRBWRADDR({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .CASCADEINA(1'b0),
+        .CASCADEINB(1'b0),
+        .CASCADEOUTA(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ),
+        .CASCADEOUTB(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ),
+        .CLKARDCLK(clka),
+        .CLKBWRCLK(clka),
+        .DBITERR(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DBITERR_UNCONNECTED ),
+        .DIADI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .DIBDI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .DIPADIP({1'b0,1'b0,1'b0,1'b0}),
+        .DIPBDIP({1'b0,1'b0,1'b0,1'b0}),
+        .DOADO({\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOADO_UNCONNECTED [31:8],\douta[10] }),
+        .DOBDO(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOBDO_UNCONNECTED [31:0]),
+        .DOPADOP({\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOPADOP_UNCONNECTED [3:1],\douta[11] }),
+        .DOPBDOP(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOPBDOP_UNCONNECTED [3:0]),
+        .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
+        .ENARDEN(ena_array),
+        .ENBWREN(1'b0),
+        .INJECTDBITERR(1'b0),
+        .INJECTSBITERR(1'b0),
+        .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
+        .REGCEAREGCE(1'b1),
+        .REGCEB(1'b0),
+        .RSTRAMARSTRAM(1'b0),
+        .RSTRAMB(1'b0),
+        .RSTREGARSTREG(1'b0),
+        .RSTREGB(1'b0),
+        .SBITERR(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_SBITERR_UNCONNECTED ),
+        .WEA({1'b0,1'b0,1'b0,1'b0}),
+        .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
+endmodule
+
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module photo_blk_mem_gen_prim_wrapper_init__parameterized2
+   (\douta[10] ,
+    \douta[11] ,
+    clka,
+    addra);
+  output [7:0]\douta[10] ;
+  output [0:0]\douta[11] ;
+  input clka;
+  input [13:0]addra;
+
+  wire \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_i_1__0_n_0 ;
+  wire [13:0]addra;
+  wire clka;
+  wire [7:0]\douta[10] ;
+  wire [0:0]\douta[11] ;
+  wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
+  wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
+  wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DBITERR_UNCONNECTED ;
+  wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_SBITERR_UNCONNECTED ;
+  wire [31:8]\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOADO_UNCONNECTED ;
+  wire [31:0]\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOBDO_UNCONNECTED ;
+  wire [3:1]\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOPADOP_UNCONNECTED ;
+  wire [3:0]\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOPBDOP_UNCONNECTED ;
+  wire [7:0]\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED ;
+  wire [8:0]\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED ;
+
+  (* CLOCK_DOMAINS = "COMMON" *) 
+  (* box_type = "PRIMITIVE" *) 
+  RAMB36E1 #(
+    .DOA_REG(1),
+    .DOB_REG(0),
+    .EN_ECC_READ("FALSE"),
+    .EN_ECC_WRITE("FALSE"),
+    .INITP_00(256'h0000000000000000C19343FFFC66000000000000000000C19341FFE032900000),
+    .INITP_01(256'hDEF600000000000000000113A03F81DEC60000000000000000011321803CE640),
+    .INITP_02(256'h406033D00000000000000000C131A060E116F60000000000000000C111A077E1),
+    .INITP_03(256'h1C30FFE030400000000000000000C01C20606032C00000000000000000C01120),
+    .INITP_04(256'h0000002030E000000000000000000000001C307FE00040000000000000000000),
+    .INITP_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'h0040E2C20080C20000A000E24000000000000000000000000000000000000000),
+    .INIT_01(256'hC20060E4200042820000E0000000A0E2E2E2E2E2E2C2A2E2E2E242A0E0C00000),
+    .INIT_02(256'h000000000000000000000000000000000000000000000020E2E20000000000A2),
+    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_04(256'h42E2E2E2E2E400004082E4200000A200E0E20060400000000000000000000000),
+    .INIT_05(256'hE2E20000000000E2420080E4000042E40000E200000042E2E2E2E26222622222),
+    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_08(256'h2240400000806080202000E4E2E440A0E2E2C220C0628200E062000020806000),
+    .INIT_09(256'h000000000000000060400000000040E4E200A0E4000020E2A0E022000000E0E4),
+    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_0B(256'h0082006040E4E400000000000000000000000000000000000000000000000000),
+    .INIT_0C(256'h42E062000000000000E0C2C200E2E2E2E2E08000A0C000E4C2E200E242C22200),
+    .INIT_0D(256'h00000000000000000000000000000000000000000000A0E48000C0E4000000E2),
+    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_0F(256'hE24200E422C28200826220E400E2E40000000000000000000000000000000000),
+    .INIT_10(256'h0000E0C20000E0E242C0A2000000000020E2E2A2E0E4E2E2E2E2E200000000E2),
+    .INIT_11(256'h000000000000000000000000000000000000000000000020826200000000E0E4),
+    .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_13(256'h62E2E260000000E22000A0E2C062E280E26200E42062E4000000000000000000),
+    .INIT_14(256'hE2E2A0000000E0C2000000C2000020E442C0E26000000000A0E2E20000002060),
+    .INIT_15(256'h00000000000000000000000000000000000000000000000000000000000000E0),
+    .INIT_16(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_17(256'hA0E2E200000000000062E2A000000000000082E400E0E2C2E26200E240000000),
+    .INIT_18(256'h00000000000000E0E2E2A000000000200000E0E420E0E04240C0E4A000000000),
+    .INIT_19(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_1A(256'h2082002000000000000000000000000000000000000000000000000000000000),
+    .INIT_1B(256'h00C0E4E200000000E0E28200202020200082E2E0000000000000C2E40060A200),
+    .INIT_1C(256'h00000000000000000000000000000080E4E42000000000000000C0E2E2C2C000),
+    .INIT_1D(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_1E(256'h0000628200000000E08200000000000000000000000000000000000000000000),
+    .INIT_1F(256'h0000A0E2C2E2600000A0E2620000000022E2E2E2E2E2E2E2E2E2E2E000000000),
+    .INIT_20(256'h000000000000000000000000000000000000000000000000E080000000000000),
+    .INIT_21(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_22(256'hC2C2E2A0000000000000000000000000C0820000000000000000000000000000),
+    .INIT_23(256'h0000000000000000000000C2E4E400000060E2820000000080E4E2E2E2E2E2E2),
+    .INIT_24(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_25(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_26(256'h0060E282000000A0E2E2E400000000000000000000000000A060000000000000),
+    .INIT_27(256'h0000000000000000000000000000000000000000000000000000C24000000000),
+    .INIT_28(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_29(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_2A(256'h0000000000000000000000000000000000600000000000000000000000000000),
+    .INIT_2B(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_2C(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_2D(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_2E(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_2F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_30(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_31(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_32(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_33(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_34(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_35(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_36(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_37(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_38(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_39(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_3A(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_3B(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_3C(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_3D(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_3E(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_3F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_40(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_41(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_42(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_43(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_44(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_45(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_46(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_47(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_48(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_49(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_4A(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_4B(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_4C(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_4D(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_4E(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_4F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_50(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_51(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_52(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_53(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_54(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_55(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_56(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_57(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_58(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_59(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_5A(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_5B(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_5C(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_5D(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_5E(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_5F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_60(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_61(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_62(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_63(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_64(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_65(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_66(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_67(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_68(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_69(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_6A(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_6B(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_6C(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_6D(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_6E(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_6F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_70(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_71(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_72(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_73(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_74(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_75(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_76(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_77(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_78(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_79(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_7A(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_7B(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_7C(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_7D(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_7E(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_7F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_A(36'h000000000),
+    .INIT_B(36'h000000000),
+    .INIT_FILE("NONE"),
+    .IS_CLKARDCLK_INVERTED(1'b0),
+    .IS_CLKBWRCLK_INVERTED(1'b0),
+    .IS_ENARDEN_INVERTED(1'b0),
+    .IS_ENBWREN_INVERTED(1'b0),
+    .IS_RSTRAMARSTRAM_INVERTED(1'b0),
+    .IS_RSTRAMB_INVERTED(1'b0),
+    .IS_RSTREGARSTREG_INVERTED(1'b0),
+    .IS_RSTREGB_INVERTED(1'b0),
+    .RAM_EXTENSION_A("NONE"),
+    .RAM_EXTENSION_B("NONE"),
+    .RAM_MODE("TDP"),
+    .RDADDR_COLLISION_HWCONFIG("PERFORMANCE"),
+    .READ_WIDTH_A(9),
+    .READ_WIDTH_B(9),
+    .RSTREG_PRIORITY_A("REGCE"),
+    .RSTREG_PRIORITY_B("REGCE"),
+    .SIM_COLLISION_CHECK("ALL"),
+    .SIM_DEVICE("7SERIES"),
+    .SRVAL_A(36'h000000000),
+    .SRVAL_B(36'h000000000),
+    .WRITE_MODE_A("WRITE_FIRST"),
+    .WRITE_MODE_B("WRITE_FIRST"),
+    .WRITE_WIDTH_A(9),
+    .WRITE_WIDTH_B(9)) 
+    \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram 
+       (.ADDRARDADDR({1'b1,addra[11:0],1'b1,1'b1,1'b1}),
+        .ADDRBWRADDR({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .CASCADEINA(1'b0),
+        .CASCADEINB(1'b0),
+        .CASCADEOUTA(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ),
+        .CASCADEOUTB(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ),
+        .CLKARDCLK(clka),
+        .CLKBWRCLK(clka),
+        .DBITERR(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DBITERR_UNCONNECTED ),
+        .DIADI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .DIBDI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .DIPADIP({1'b0,1'b0,1'b0,1'b0}),
+        .DIPBDIP({1'b0,1'b0,1'b0,1'b0}),
+        .DOADO({\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOADO_UNCONNECTED [31:8],\douta[10] }),
+        .DOBDO(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOBDO_UNCONNECTED [31:0]),
+        .DOPADOP({\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOPADOP_UNCONNECTED [3:1],\douta[11] }),
+        .DOPBDOP(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOPBDOP_UNCONNECTED [3:0]),
+        .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
+        .ENARDEN(\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_i_1__0_n_0 ),
+        .ENBWREN(1'b0),
+        .INJECTDBITERR(1'b0),
+        .INJECTSBITERR(1'b0),
+        .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
+        .REGCEAREGCE(1'b1),
+        .REGCEB(1'b0),
+        .RSTRAMARSTRAM(1'b0),
+        .RSTRAMB(1'b0),
+        .RSTREGARSTREG(1'b0),
+        .RSTREGB(1'b0),
+        .SBITERR(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_SBITERR_UNCONNECTED ),
+        .WEA({1'b0,1'b0,1'b0,1'b0}),
+        .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
+  LUT2 #(
+    .INIT(4'h2)) 
+    \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_i_1__0 
+       (.I0(addra[12]),
+        .I1(addra[13]),
+        .O(\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_i_1__0_n_0 ));
+endmodule
+
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module photo_blk_mem_gen_prim_wrapper_init__parameterized3
+   (\douta[10] ,
+    \douta[11] ,
+    clka,
+    addra);
+  output [7:0]\douta[10] ;
+  output [0:0]\douta[11] ;
+  input clka;
+  input [13:0]addra;
+
+  wire \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_i_1_n_0 ;
+  wire [13:0]addra;
+  wire clka;
+  wire [7:0]\douta[10] ;
+  wire [0:0]\douta[11] ;
+  wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
+  wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
+  wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DBITERR_UNCONNECTED ;
+  wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_SBITERR_UNCONNECTED ;
+  wire [31:8]\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOADO_UNCONNECTED ;
+  wire [31:0]\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOBDO_UNCONNECTED ;
+  wire [3:1]\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOPADOP_UNCONNECTED ;
+  wire [3:0]\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOPBDOP_UNCONNECTED ;
+  wire [7:0]\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED ;
+  wire [8:0]\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED ;
+
+  (* CLOCK_DOMAINS = "COMMON" *) 
+  (* box_type = "PRIMITIVE" *) 
+  RAMB36E1 #(
+    .DOA_REG(1),
+    .DOB_REG(0),
+    .EN_ECC_READ("FALSE"),
+    .EN_ECC_WRITE("FALSE"),
+    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_03(256'h0030000800182000080000000000000030000800180000000000000000000000),
+    .INITP_04(256'h0000006000C40018603F980000000000000070004C0018603C18000000000000),
+    .INITP_05(256'h00000000C06000CC001C406000000000000000C06000C4000CE0779000000000),
+    .INITP_06(256'h000000000000C063F03FB83F80208C000000000000C061E00E001E00600C0000),
+    .INITP_07(256'h2608000000000000C0FCE02C787FFC27EC000000000000C07DF03FF87FFC27CC),
+    .INITP_08(256'h02002628000000000000C1FEC0401002002628000000000000C0FEC000180208),
+    .INITP_09(256'h6FE003002628000000000000C1B0C06D2002002628000000000000C1B6C04020),
+    .INITP_0A(256'h99E06930FFF02728000000000000C111C069E07F802228000000000000C130C0),
+    .INITP_0B(256'h00C189F83930C3FC2DEC000000000000C199F83931F7F82FE8000000000000C1),
+    .INITP_0C(256'h00000001841839300180680C000000000000C18C383930018C286C0000000000),
+    .INITP_0D(256'h0000000000C0F6003DF00DC06BF4000000000000018600391001806B8C000000),
+    .INITP_0E(256'h04000000000001C0F30026D838706C16000000000000C0F6003FF018E068F400),
+    .INITP_0F(256'h384704000000000000C07181401E70386704000000000000C07100669C78706F),
+    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_13(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_14(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_15(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_16(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_17(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_18(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_19(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_1A(256'h00000082C2000000000000000000000000000000000000000000000000000000),
+    .INIT_1B(256'h0000E42200000000000000000000000000000000A28000000000000000000000),
+    .INIT_1C(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_1D(256'h0000006062000000000000000000000000000000000000000000000000000000),
+    .INIT_1E(256'h0000000000000000000000A2E200000000E0A200000000000000000000000000),
+    .INIT_1F(256'h000000000000000000E0E2A200000000000000000000000000000000E2C20000),
+    .INIT_20(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_21(256'h000022826282C020600000A2E400000000000000000000000000000000000000),
+    .INIT_22(256'h80C2000082420000000000000000000000000062E24000000062E40000000000),
+    .INIT_23(256'h000000000000000000000000000000000082E282000000000000000000000000),
+    .INIT_24(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_25(256'hE0E2E400000000000040E4E2E2E2E2E2E4E260E4620000000000000000000000),
+    .INIT_26(256'h0000000000000000E2E40000E0C20000000000000000000000000000E2C00000),
+    .INIT_27(256'h00000000000000000000000000000000000000000000000000A2E2A000000000),
+    .INIT_28(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_29(256'h000000C0E242000062E46200000000000020E2A2A0A262E2E2E280E4C0000000),
+    .INIT_2A(256'h0082C2000000000000000000000000C0E4E20000E0C200000000000000000000),
+    .INIT_2B(256'h0000000000000000000000000000000000000000000000E0E4E4600000000000),
+    .INIT_2C(256'hC060008020400000000000000000000000000000000000000000000000000000),
+    .INIT_2D(256'h000000000000000000000020E2E2000020422000000000000042E2C000000000),
+    .INIT_2E(256'hE2E260000000000000A26200000000200000000000000060E482000082E20000),
+    .INIT_2F(256'h00000000000000000000000000000000000000000000000000000000000000C0),
+    .INIT_30(256'h0020E2E000000000000000006222000000000000000000000000000000000000),
+    .INIT_31(256'h800000A0E2E22260000000C000000000000000A2E2E202000000000000000000),
+    .INIT_32(256'h00000000000000A0E2E26000000000000082A200000020E2A262826000000000),
+    .INIT_33(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_34(256'h224000000000000000E0E2E2004020A0E2000000422200000000000000000000),
+    .INIT_35(256'hE2E2E2C20000000000A0E4E2C2C2E2E2E46082E282000000000062E2C2C2E242),
+    .INIT_36(256'h00000000000000000000000000000080E2E260000000000000C2E2800000A2E2),
+    .INIT_37(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_38(256'h40E4E2E2E2C2C2E2E2E242E2C20200000080E4E200E2E2E2E2E2800062620000),
+    .INIT_39(256'h80E2E28282C2C0C2C2C2E242000000000080E4E2E2E20242C2E2E2C2E2000000),
+    .INIT_3A(256'h000000000000000000000000000000000000000000000040E2E2600000000000),
+    .INIT_3B(256'hA2E42200A2420000000000000000000000000000000000000000000000000000),
+    .INIT_3C(256'hA0E2E2C2E200000060E4E26242C2E2E2A2E2E4E2E20200000080E4E200E2C2E2),
+    .INIT_3D(256'hE2E260000000000040E2C2E2E2E2A080E2E2220000000000000000C0A2620000),
+    .INIT_3E(256'h0000000000000000000000000000000000000000000000000000000000000020),
+    .INIT_3F(256'h0020E4E000E2E40000000000E280000000000000000000000000000000000000),
+    .INIT_40(256'h00000000E0600000000080E4420000000000000000C0E2C0000000C042000000),
+    .INIT_41(256'h0000000000000020E2E2400000000080E2C2C2E2E2E2420082E4000000000000),
+    .INIT_42(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_43(256'h00000000000000000060E4C00082A2000000E420C26000000000000000000000),
+    .INIT_44(256'h42820000000000000022400000200000000060C2000000000000000000C0E4A0),
+    .INIT_45(256'h00000000000000000000000000000020E2E24000000000E2E2E2E28242E26200),
+    .INIT_46(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_47(256'h000000000080E4A000000000000000000060E4C00062E4000000E400C2600000),
+    .INIT_48(256'hE260E20200E42200428200000000000000E2E200C0E20000000020E200000000),
+    .INIT_49(256'h000000000000000000000000000000000000000000000020E4E22000000000E2),
+    .INIT_4A(256'h0080E400A2200000000000000000000000000000000000000000000000000000),
+    .INIT_4B(256'hA000E2C000000000000000000020E2E200000000000000000060E4800042E400),
+    .INIT_4C(256'hE4E22000000020E26200C20200400000628200000000000000E2420000620022),
+    .INIT_4D(256'h0000000000000000000000000000000000000000000000000000000000000020),
+    .INIT_4E(256'h0040E4800020E4200040E400A200000000000000000000000000000000000000),
+    .INIT_4F(256'h00E22200002282E2E2E2E2C000000000000000000080E2E20000000000000000),
+    .INIT_50(256'h0000000000000000E4E20000000040E4E00000C200000000E2E2000000000000),
+    .INIT_51(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_52(256'h02C0E040000000000020E4600040E2000000E400A28000000000000000000000),
+    .INIT_53(256'hE2E240000000000000628200E280E0E28222E2C000000000E0A2E2E2E2E2C2E2),
+    .INIT_54(256'h00000000000000000000000000000000E4E20000000000E4600000E460000020),
+    .INIT_55(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_56(256'hE4E2C2E2E2E2C2C2E2E2E2E2E00000000020E44080E2E2C20000E40062A00000),
+    .INIT_57(256'h020000E2620060E4C2C2E260000000000020E4A0E46000E2C000E402000000E0),
+    .INIT_58(256'h000000000000000000000000000000000000000000000000E4E40000000000E2),
+    .INIT_59(256'hE2A2E20022E20000000000000000000000000000000000000000000000000000),
+    .INIT_5A(256'h6000E22200000042E2E2E222A042E2C2C2E2E2C2E2E200000040E400E2E2E2E2),
+    .INIT_5B(256'hE4E40000000000E242000042E200A0E2C2C2C2E26200000000A0E2C2E24000E2),
+    .INIT_5C(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_5D(256'h0060E4A0E4028002E2E2E4008202000000000000000000000000000000000000),
+    .INIT_5E(256'h0020E2C2E22000E24000A222000000C0E422A0000000C2E2E24222E2E2E28000),
+    .INIT_5F(256'h0000000000000000E4E20000000000E2820000A0E46080E4E2E2C2C2E4000000),
+    .INIT_60(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_61(256'h4200008082E4800000C0C2A0E400000000420200226200000000000000000000),
+    .INIT_62(256'h60A0E2C2E22000000000E2C2E20000E2600062620000000000000000000080E2),
+    .INIT_63(256'h00000000000000000000000000000000E4E4000000000082C2000020E4A20000),
+    .INIT_64(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_65(256'h00000000000000E28200000000400000004282A0E40040200000000022A20000),
+    .INIT_66(256'hE440000060E4A000000000E2E40000000000E2E2E20020E2600000C200000000),
+    .INIT_67(256'h0000000000000000000000000000000000000000000000006060000000000042),
+    .INIT_68(256'h0200400000E20000000000000000000000000000000000000000000000000000),
+    .INIT_69(256'hA00080C20000000000000000406000C2E2C000000000000000626280E2C0C2A2),
+    .INIT_6A(256'h0000000000000000E2A0000000E2420000000060A00000000000E2C2E20020E2),
+    .INIT_6B(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_6C(256'h00A26240E400A2E4E2E2E2C2A0E4000000000000000000000000000000000000),
+    .INIT_6D(256'h0000E2C2E26200E262E242E40000000000000040E4220042E2C2000000000000),
+    .INIT_6E(256'h00000000000000008282000000000080E2C2020200E2E4000000000000000000),
+    .INIT_6F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_70(256'hE2E222000000000000E26200E400000062E2E2E4C0E2E2000000000000000000),
+    .INIT_71(256'h00000000000000000000E2E2C2E22262E2E242E260000000000000A2E2C00000),
+    .INIT_72(256'h000000000000000000000000000000A0E2E260000000000082E2E2820000E440),
+    .INIT_73(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_74(256'h0040C2E2E240000040A2E2420000000000E26200C28200A00000002240E42200),
+    .INIT_75(256'h00E2E2620000C282000000000000000000A0E4C000E46220E4C220E2A2802000),
+    .INIT_76(256'h000000000000000000000000000000000000000000000000E2E2800000000000),
+    .INIT_77(256'h2000000000E46000000000000000000000000000000000000000000000000000),
+    .INIT_78(256'h828000E2E2E2E20000E2E2E2C20000000000E2E2C000000000E2420062E202E4),
+    .INIT_79(256'hE2E240000000000060E2E2420000C0E420000000000000400082620000C24200),
+    .INIT_7A(256'h00000000000000000000000000000000000000000000000000000000000000A0),
+    .INIT_7B(256'h00C24200E0E2E2E22000000000E4800000000000000000000000000000000000),
+    .INIT_7C(256'h00E4E00000000000000000E2C2E2020080E2C2E2E20000000060E2C2E2000000),
+    .INIT_7D(256'h0000000000000000E4E20000000000000082E242000020E4820000000000A0E4),
+    .INIT_7E(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_7F(256'h000082E2E240000000C280000082A26200000000000000000000000000000000),
+    .INIT_A(36'h000000000),
+    .INIT_B(36'h000000000),
+    .INIT_FILE("NONE"),
+    .IS_CLKARDCLK_INVERTED(1'b0),
+    .IS_CLKBWRCLK_INVERTED(1'b0),
+    .IS_ENARDEN_INVERTED(1'b0),
+    .IS_ENBWREN_INVERTED(1'b0),
+    .IS_RSTRAMARSTRAM_INVERTED(1'b0),
+    .IS_RSTRAMB_INVERTED(1'b0),
+    .IS_RSTREGARSTREG_INVERTED(1'b0),
+    .IS_RSTREGB_INVERTED(1'b0),
+    .RAM_EXTENSION_A("NONE"),
+    .RAM_EXTENSION_B("NONE"),
+    .RAM_MODE("TDP"),
+    .RDADDR_COLLISION_HWCONFIG("PERFORMANCE"),
+    .READ_WIDTH_A(9),
+    .READ_WIDTH_B(9),
+    .RSTREG_PRIORITY_A("REGCE"),
+    .RSTREG_PRIORITY_B("REGCE"),
+    .SIM_COLLISION_CHECK("ALL"),
+    .SIM_DEVICE("7SERIES"),
+    .SRVAL_A(36'h000000000),
+    .SRVAL_B(36'h000000000),
+    .WRITE_MODE_A("WRITE_FIRST"),
+    .WRITE_MODE_B("WRITE_FIRST"),
+    .WRITE_WIDTH_A(9),
+    .WRITE_WIDTH_B(9)) 
+    \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram 
+       (.ADDRARDADDR({1'b1,addra[11:0],1'b1,1'b1,1'b1}),
+        .ADDRBWRADDR({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .CASCADEINA(1'b0),
+        .CASCADEINB(1'b0),
+        .CASCADEOUTA(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ),
+        .CASCADEOUTB(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ),
+        .CLKARDCLK(clka),
+        .CLKBWRCLK(clka),
+        .DBITERR(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DBITERR_UNCONNECTED ),
+        .DIADI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .DIBDI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .DIPADIP({1'b0,1'b0,1'b0,1'b0}),
+        .DIPBDIP({1'b0,1'b0,1'b0,1'b0}),
+        .DOADO({\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOADO_UNCONNECTED [31:8],\douta[10] }),
+        .DOBDO(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOBDO_UNCONNECTED [31:0]),
+        .DOPADOP({\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOPADOP_UNCONNECTED [3:1],\douta[11] }),
+        .DOPBDOP(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOPBDOP_UNCONNECTED [3:0]),
+        .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
+        .ENARDEN(\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_i_1_n_0 ),
+        .ENBWREN(1'b0),
+        .INJECTDBITERR(1'b0),
+        .INJECTSBITERR(1'b0),
+        .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
+        .REGCEAREGCE(1'b1),
+        .REGCEB(1'b0),
+        .RSTRAMARSTRAM(1'b0),
+        .RSTRAMB(1'b0),
+        .RSTREGARSTREG(1'b0),
+        .RSTREGB(1'b0),
+        .SBITERR(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_SBITERR_UNCONNECTED ),
+        .WEA({1'b0,1'b0,1'b0,1'b0}),
+        .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
+  LUT2 #(
+    .INIT(4'h2)) 
+    \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_i_1 
+       (.I0(addra[13]),
+        .I1(addra[12]),
+        .O(\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_i_1_n_0 ));
+endmodule
+
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module photo_blk_mem_gen_prim_wrapper_init__parameterized4
+   (DOADO,
+    DOPADOP,
+    clka,
+    ram_ena,
+    addra);
+  output [7:0]DOADO;
+  output [0:0]DOPADOP;
+  input clka;
+  input ram_ena;
+  input [11:0]addra;
+
+  wire [7:0]DOADO;
+  wire [0:0]DOPADOP;
+  wire [11:0]addra;
+  wire clka;
+  wire ram_ena;
+  wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
+  wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
+  wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DBITERR_UNCONNECTED ;
+  wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_SBITERR_UNCONNECTED ;
+  wire [31:8]\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOADO_UNCONNECTED ;
+  wire [31:0]\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOBDO_UNCONNECTED ;
+  wire [3:1]\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOPADOP_UNCONNECTED ;
+  wire [3:0]\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOPBDOP_UNCONNECTED ;
+  wire [7:0]\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED ;
+  wire [8:0]\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED ;
+
+  (* CLOCK_DOMAINS = "COMMON" *) 
+  (* box_type = "PRIMITIVE" *) 
+  RAMB36E1 #(
+    .DOA_REG(1),
+    .DOB_REG(0),
+    .EN_ECC_READ("FALSE"),
+    .EN_ECC_WRITE("FALSE"),
+    .INITP_00(256'h00000000000000000000000000C1C000600800000000000000000021C1C01C70),
+    .INITP_01(256'h000000000000000000000000000000408000000000000000000000000000C080),
+    .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'hE2A200000000C0E2C2E220000000000000000042E4E4A000A0E2E2C200000000),
+    .INIT_01(256'h000000000000000000000000000000000000000000000000000082C0000000E2),
+    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_03(256'h0042020000000000000000E04200000000000000000000000000000000000000),
+    .INIT_04(256'h00000000000000A0E2E40000000000C2E2820000000000000000000000000000),
+    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_08(256'h0000000000000000000000000000000082C20000000000A0E400000000000000),
+    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_0B(256'hC200000000000000000000000000000000000000000000000000000000000000),
+    .INIT_0C(256'h000000000000000000000000000000000000000000000000E042000000000040),
+    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_13(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_14(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_15(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_16(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_17(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_18(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_19(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_1A(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_1B(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_1C(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_1D(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_1E(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_1F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_20(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_21(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_22(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_23(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_24(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_25(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_26(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_27(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_28(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_29(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_2A(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_2B(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_2C(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_2D(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_2E(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_2F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_30(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_31(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_32(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_33(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_34(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_35(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_36(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_37(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_38(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_39(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_3A(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_3B(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_3C(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_3D(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_3E(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_3F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_40(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_41(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_42(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_43(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_44(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_45(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_46(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_47(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_48(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_49(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_4A(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_4B(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_4C(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_4D(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_4E(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_4F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_50(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_51(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_52(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_53(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_54(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_55(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_56(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_57(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_58(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_59(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_5A(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_5B(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_5C(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_5D(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_5E(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_5F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_60(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_61(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_62(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_63(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_64(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_65(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_66(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_67(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_68(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_69(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_6A(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_6B(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_6C(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_6D(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_6E(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_6F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_70(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_71(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_72(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_73(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_74(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_75(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_76(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_77(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_78(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_79(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_7A(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_7B(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_7C(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_7D(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_7E(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_7F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_A(36'h000000000),
+    .INIT_B(36'h000000000),
+    .INIT_FILE("NONE"),
+    .IS_CLKARDCLK_INVERTED(1'b0),
+    .IS_CLKBWRCLK_INVERTED(1'b0),
+    .IS_ENARDEN_INVERTED(1'b0),
+    .IS_ENBWREN_INVERTED(1'b0),
+    .IS_RSTRAMARSTRAM_INVERTED(1'b0),
+    .IS_RSTRAMB_INVERTED(1'b0),
+    .IS_RSTREGARSTREG_INVERTED(1'b0),
+    .IS_RSTREGB_INVERTED(1'b0),
+    .RAM_EXTENSION_A("NONE"),
+    .RAM_EXTENSION_B("NONE"),
+    .RAM_MODE("TDP"),
+    .RDADDR_COLLISION_HWCONFIG("PERFORMANCE"),
+    .READ_WIDTH_A(9),
+    .READ_WIDTH_B(9),
+    .RSTREG_PRIORITY_A("REGCE"),
+    .RSTREG_PRIORITY_B("REGCE"),
+    .SIM_COLLISION_CHECK("ALL"),
+    .SIM_DEVICE("7SERIES"),
+    .SRVAL_A(36'h000000000),
+    .SRVAL_B(36'h000000000),
+    .WRITE_MODE_A("WRITE_FIRST"),
+    .WRITE_MODE_B("WRITE_FIRST"),
+    .WRITE_WIDTH_A(9),
+    .WRITE_WIDTH_B(9)) 
+    \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram 
+       (.ADDRARDADDR({1'b1,addra,1'b1,1'b1,1'b1}),
+        .ADDRBWRADDR({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .CASCADEINA(1'b0),
+        .CASCADEINB(1'b0),
+        .CASCADEOUTA(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ),
+        .CASCADEOUTB(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ),
+        .CLKARDCLK(clka),
+        .CLKBWRCLK(clka),
+        .DBITERR(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DBITERR_UNCONNECTED ),
+        .DIADI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .DIBDI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .DIPADIP({1'b0,1'b0,1'b0,1'b0}),
+        .DIPBDIP({1'b0,1'b0,1'b0,1'b0}),
+        .DOADO({\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOADO_UNCONNECTED [31:8],DOADO}),
+        .DOBDO(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOBDO_UNCONNECTED [31:0]),
+        .DOPADOP({\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOPADOP_UNCONNECTED [3:1],DOPADOP}),
+        .DOPBDOP(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOPBDOP_UNCONNECTED [3:0]),
+        .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
+        .ENARDEN(ram_ena),
+        .ENBWREN(1'b0),
+        .INJECTDBITERR(1'b0),
+        .INJECTSBITERR(1'b0),
+        .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
+        .REGCEAREGCE(1'b1),
+        .REGCEB(1'b0),
+        .RSTRAMARSTRAM(1'b0),
+        .RSTRAMB(1'b0),
+        .RSTREGARSTREG(1'b0),
+        .RSTREGB(1'b0),
+        .SBITERR(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_SBITERR_UNCONNECTED ),
+        .WEA({1'b0,1'b0,1'b0,1'b0}),
+        .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
+endmodule
+
+(* ORIG_REF_NAME = "blk_mem_gen_top" *) 
+module photo_blk_mem_gen_top
+   (douta,
+    addra,
+    clka);
+  output [11:0]douta;
+  input [13:0]addra;
+  input clka;
+
+  wire [13:0]addra;
+  wire clka;
+  wire [11:0]douta;
+
+  photo_blk_mem_gen_generic_cstr \valid.cstr 
+       (.addra(addra),
+        .clka(clka),
+        .douta(douta));
+endmodule
+
+(* C_ADDRA_WIDTH = "14" *) (* C_ADDRB_WIDTH = "14" *) (* C_ALGORITHM = "1" *) 
+(* C_AXI_ID_WIDTH = "4" *) (* C_AXI_SLAVE_TYPE = "0" *) (* C_AXI_TYPE = "1" *) 
+(* C_BYTE_SIZE = "9" *) (* C_COMMON_CLK = "0" *) (* C_COUNT_18K_BRAM = "1" *) 
+(* C_COUNT_36K_BRAM = "5" *) (* C_CTRL_ECC_ALGO = "NONE" *) (* C_DEFAULT_DATA = "0" *) 
+(* C_DISABLE_WARN_BHV_COLL = "0" *) (* C_DISABLE_WARN_BHV_RANGE = "0" *) (* C_ELABORATION_DIR = "./" *) 
+(* C_ENABLE_32BIT_ADDRESS = "0" *) (* C_EN_DEEPSLEEP_PIN = "0" *) (* C_EN_ECC_PIPE = "0" *) 
+(* C_EN_RDADDRA_CHG = "0" *) (* C_EN_RDADDRB_CHG = "0" *) (* C_EN_SAFETY_CKT = "0" *) 
+(* C_EN_SHUTDOWN_PIN = "0" *) (* C_EN_SLEEP_PIN = "0" *) (* C_EST_POWER_SUMMARY = "Estimated Power for IP     :     5.7617 mW" *) 
+(* C_FAMILY = "artix7" *) (* C_HAS_AXI_ID = "0" *) (* C_HAS_ENA = "0" *) 
+(* C_HAS_ENB = "0" *) (* C_HAS_INJECTERR = "0" *) (* C_HAS_MEM_OUTPUT_REGS_A = "1" *) 
+(* C_HAS_MEM_OUTPUT_REGS_B = "0" *) (* C_HAS_MUX_OUTPUT_REGS_A = "0" *) (* C_HAS_MUX_OUTPUT_REGS_B = "0" *) 
+(* C_HAS_REGCEA = "0" *) (* C_HAS_REGCEB = "0" *) (* C_HAS_RSTA = "0" *) 
+(* C_HAS_RSTB = "0" *) (* C_HAS_SOFTECC_INPUT_REGS_A = "0" *) (* C_HAS_SOFTECC_OUTPUT_REGS_B = "0" *) 
+(* C_INITA_VAL = "0" *) (* C_INITB_VAL = "0" *) (* C_INIT_FILE = "photo.mem" *) 
+(* C_INIT_FILE_NAME = "photo.mif" *) (* C_INTERFACE_TYPE = "0" *) (* C_LOAD_INIT_FILE = "1" *) 
+(* C_MEM_TYPE = "3" *) (* C_MUX_PIPELINE_STAGES = "0" *) (* C_PRIM_TYPE = "1" *) 
+(* C_READ_DEPTH_A = "14402" *) (* C_READ_DEPTH_B = "14402" *) (* C_READ_WIDTH_A = "12" *) 
+(* C_READ_WIDTH_B = "12" *) (* C_RSTRAM_A = "0" *) (* C_RSTRAM_B = "0" *) 
+(* C_RST_PRIORITY_A = "CE" *) (* C_RST_PRIORITY_B = "CE" *) (* C_SIM_COLLISION_CHECK = "ALL" *) 
+(* C_USE_BRAM_BLOCK = "0" *) (* C_USE_BYTE_WEA = "0" *) (* C_USE_BYTE_WEB = "0" *) 
+(* C_USE_DEFAULT_DATA = "0" *) (* C_USE_ECC = "0" *) (* C_USE_SOFTECC = "0" *) 
+(* C_USE_URAM = "0" *) (* C_WEA_WIDTH = "1" *) (* C_WEB_WIDTH = "1" *) 
+(* C_WRITE_DEPTH_A = "14402" *) (* C_WRITE_DEPTH_B = "14402" *) (* C_WRITE_MODE_A = "WRITE_FIRST" *) 
+(* C_WRITE_MODE_B = "WRITE_FIRST" *) (* C_WRITE_WIDTH_A = "12" *) (* C_WRITE_WIDTH_B = "12" *) 
+(* C_XDEVICEFAMILY = "artix7" *) (* ORIG_REF_NAME = "blk_mem_gen_v8_3_3" *) (* downgradeipidentifiedwarnings = "yes" *) 
+module photo_blk_mem_gen_v8_3_3
+   (clka,
+    rsta,
+    ena,
+    regcea,
+    wea,
+    addra,
+    dina,
+    douta,
+    clkb,
+    rstb,
+    enb,
+    regceb,
+    web,
+    addrb,
+    dinb,
+    doutb,
+    injectsbiterr,
+    injectdbiterr,
+    eccpipece,
+    sbiterr,
+    dbiterr,
+    rdaddrecc,
+    sleep,
+    deepsleep,
+    shutdown,
+    rsta_busy,
+    rstb_busy,
+    s_aclk,
+    s_aresetn,
+    s_axi_awid,
+    s_axi_awaddr,
+    s_axi_awlen,
+    s_axi_awsize,
+    s_axi_awburst,
+    s_axi_awvalid,
+    s_axi_awready,
+    s_axi_wdata,
+    s_axi_wstrb,
+    s_axi_wlast,
+    s_axi_wvalid,
+    s_axi_wready,
+    s_axi_bid,
+    s_axi_bresp,
+    s_axi_bvalid,
+    s_axi_bready,
+    s_axi_arid,
+    s_axi_araddr,
+    s_axi_arlen,
+    s_axi_arsize,
+    s_axi_arburst,
+    s_axi_arvalid,
+    s_axi_arready,
+    s_axi_rid,
+    s_axi_rdata,
+    s_axi_rresp,
+    s_axi_rlast,
+    s_axi_rvalid,
+    s_axi_rready,
+    s_axi_injectsbiterr,
+    s_axi_injectdbiterr,
+    s_axi_sbiterr,
+    s_axi_dbiterr,
+    s_axi_rdaddrecc);
+  input clka;
+  input rsta;
+  input ena;
+  input regcea;
+  input [0:0]wea;
+  input [13:0]addra;
+  input [11:0]dina;
+  output [11:0]douta;
+  input clkb;
+  input rstb;
+  input enb;
+  input regceb;
+  input [0:0]web;
+  input [13:0]addrb;
+  input [11:0]dinb;
+  output [11:0]doutb;
+  input injectsbiterr;
+  input injectdbiterr;
+  input eccpipece;
+  output sbiterr;
+  output dbiterr;
+  output [13:0]rdaddrecc;
+  input sleep;
+  input deepsleep;
+  input shutdown;
+  output rsta_busy;
+  output rstb_busy;
+  input s_aclk;
+  input s_aresetn;
+  input [3:0]s_axi_awid;
+  input [31:0]s_axi_awaddr;
+  input [7:0]s_axi_awlen;
+  input [2:0]s_axi_awsize;
+  input [1:0]s_axi_awburst;
+  input s_axi_awvalid;
+  output s_axi_awready;
+  input [11:0]s_axi_wdata;
+  input [0:0]s_axi_wstrb;
+  input s_axi_wlast;
+  input s_axi_wvalid;
+  output s_axi_wready;
+  output [3:0]s_axi_bid;
+  output [1:0]s_axi_bresp;
+  output s_axi_bvalid;
+  input s_axi_bready;
+  input [3:0]s_axi_arid;
+  input [31:0]s_axi_araddr;
+  input [7:0]s_axi_arlen;
+  input [2:0]s_axi_arsize;
+  input [1:0]s_axi_arburst;
+  input s_axi_arvalid;
+  output s_axi_arready;
+  output [3:0]s_axi_rid;
+  output [11:0]s_axi_rdata;
+  output [1:0]s_axi_rresp;
+  output s_axi_rlast;
+  output s_axi_rvalid;
+  input s_axi_rready;
+  input s_axi_injectsbiterr;
+  input s_axi_injectdbiterr;
+  output s_axi_sbiterr;
+  output s_axi_dbiterr;
+  output [13:0]s_axi_rdaddrecc;
+
+  wire \<const0> ;
+  wire [13:0]addra;
+  wire clka;
+  wire [11:0]douta;
+
+  assign dbiterr = \<const0> ;
+  assign doutb[11] = \<const0> ;
+  assign doutb[10] = \<const0> ;
+  assign doutb[9] = \<const0> ;
+  assign doutb[8] = \<const0> ;
+  assign doutb[7] = \<const0> ;
+  assign doutb[6] = \<const0> ;
+  assign doutb[5] = \<const0> ;
+  assign doutb[4] = \<const0> ;
+  assign doutb[3] = \<const0> ;
+  assign doutb[2] = \<const0> ;
+  assign doutb[1] = \<const0> ;
+  assign doutb[0] = \<const0> ;
+  assign rdaddrecc[13] = \<const0> ;
+  assign rdaddrecc[12] = \<const0> ;
+  assign rdaddrecc[11] = \<const0> ;
+  assign rdaddrecc[10] = \<const0> ;
+  assign rdaddrecc[9] = \<const0> ;
+  assign rdaddrecc[8] = \<const0> ;
+  assign rdaddrecc[7] = \<const0> ;
+  assign rdaddrecc[6] = \<const0> ;
+  assign rdaddrecc[5] = \<const0> ;
+  assign rdaddrecc[4] = \<const0> ;
+  assign rdaddrecc[3] = \<const0> ;
+  assign rdaddrecc[2] = \<const0> ;
+  assign rdaddrecc[1] = \<const0> ;
+  assign rdaddrecc[0] = \<const0> ;
+  assign rsta_busy = \<const0> ;
+  assign rstb_busy = \<const0> ;
+  assign s_axi_arready = \<const0> ;
+  assign s_axi_awready = \<const0> ;
+  assign s_axi_bid[3] = \<const0> ;
+  assign s_axi_bid[2] = \<const0> ;
+  assign s_axi_bid[1] = \<const0> ;
+  assign s_axi_bid[0] = \<const0> ;
+  assign s_axi_bresp[1] = \<const0> ;
+  assign s_axi_bresp[0] = \<const0> ;
+  assign s_axi_bvalid = \<const0> ;
+  assign s_axi_dbiterr = \<const0> ;
+  assign s_axi_rdaddrecc[13] = \<const0> ;
+  assign s_axi_rdaddrecc[12] = \<const0> ;
+  assign s_axi_rdaddrecc[11] = \<const0> ;
+  assign s_axi_rdaddrecc[10] = \<const0> ;
+  assign s_axi_rdaddrecc[9] = \<const0> ;
+  assign s_axi_rdaddrecc[8] = \<const0> ;
+  assign s_axi_rdaddrecc[7] = \<const0> ;
+  assign s_axi_rdaddrecc[6] = \<const0> ;
+  assign s_axi_rdaddrecc[5] = \<const0> ;
+  assign s_axi_rdaddrecc[4] = \<const0> ;
+  assign s_axi_rdaddrecc[3] = \<const0> ;
+  assign s_axi_rdaddrecc[2] = \<const0> ;
+  assign s_axi_rdaddrecc[1] = \<const0> ;
+  assign s_axi_rdaddrecc[0] = \<const0> ;
+  assign s_axi_rdata[11] = \<const0> ;
+  assign s_axi_rdata[10] = \<const0> ;
+  assign s_axi_rdata[9] = \<const0> ;
+  assign s_axi_rdata[8] = \<const0> ;
+  assign s_axi_rdata[7] = \<const0> ;
+  assign s_axi_rdata[6] = \<const0> ;
+  assign s_axi_rdata[5] = \<const0> ;
+  assign s_axi_rdata[4] = \<const0> ;
+  assign s_axi_rdata[3] = \<const0> ;
+  assign s_axi_rdata[2] = \<const0> ;
+  assign s_axi_rdata[1] = \<const0> ;
+  assign s_axi_rdata[0] = \<const0> ;
+  assign s_axi_rid[3] = \<const0> ;
+  assign s_axi_rid[2] = \<const0> ;
+  assign s_axi_rid[1] = \<const0> ;
+  assign s_axi_rid[0] = \<const0> ;
+  assign s_axi_rlast = \<const0> ;
+  assign s_axi_rresp[1] = \<const0> ;
+  assign s_axi_rresp[0] = \<const0> ;
+  assign s_axi_rvalid = \<const0> ;
+  assign s_axi_sbiterr = \<const0> ;
+  assign s_axi_wready = \<const0> ;
+  assign sbiterr = \<const0> ;
+  GND GND
+       (.G(\<const0> ));
+  photo_blk_mem_gen_v8_3_3_synth inst_blk_mem_gen
+       (.addra(addra),
+        .clka(clka),
+        .douta(douta));
+endmodule
+
+(* ORIG_REF_NAME = "blk_mem_gen_v8_3_3_synth" *) 
+module photo_blk_mem_gen_v8_3_3_synth
+   (douta,
+    addra,
+    clka);
+  output [11:0]douta;
+  input [13:0]addra;
+  input clka;
+
+  wire [13:0]addra;
+  wire clka;
+  wire [11:0]douta;
+
+  photo_blk_mem_gen_top \gnbram.gnativebmg.native_blk_mem_gen 
+       (.addra(addra),
+        .clka(clka),
+        .douta(douta));
+endmodule
+`ifndef GLBL
+`define GLBL
+`timescale  1 ps / 1 ps
+
+module glbl ();
+
+    parameter ROC_WIDTH = 100000;
+    parameter TOC_WIDTH = 0;
+
+//--------   STARTUP Globals --------------
+    wire GSR;
+    wire GTS;
+    wire GWE;
+    wire PRLD;
+    tri1 p_up_tmp;
+    tri (weak1, strong0) PLL_LOCKG = p_up_tmp;
+
+    wire PROGB_GLBL;
+    wire CCLKO_GLBL;
+    wire FCSBO_GLBL;
+    wire [3:0] DO_GLBL;
+    wire [3:0] DI_GLBL;
+   
+    reg GSR_int;
+    reg GTS_int;
+    reg PRLD_int;
+
+//--------   JTAG Globals --------------
+    wire JTAG_TDO_GLBL;
+    wire JTAG_TCK_GLBL;
+    wire JTAG_TDI_GLBL;
+    wire JTAG_TMS_GLBL;
+    wire JTAG_TRST_GLBL;
+
+    reg JTAG_CAPTURE_GLBL;
+    reg JTAG_RESET_GLBL;
+    reg JTAG_SHIFT_GLBL;
+    reg JTAG_UPDATE_GLBL;
+    reg JTAG_RUNTEST_GLBL;
+
+    reg JTAG_SEL1_GLBL = 0;
+    reg JTAG_SEL2_GLBL = 0 ;
+    reg JTAG_SEL3_GLBL = 0;
+    reg JTAG_SEL4_GLBL = 0;
+
+    reg JTAG_USER_TDO1_GLBL = 1'bz;
+    reg JTAG_USER_TDO2_GLBL = 1'bz;
+    reg JTAG_USER_TDO3_GLBL = 1'bz;
+    reg JTAG_USER_TDO4_GLBL = 1'bz;
+
+    assign (weak1, weak0) GSR = GSR_int;
+    assign (weak1, weak0) GTS = GTS_int;
+    assign (weak1, weak0) PRLD = PRLD_int;
+
+    initial begin
+	GSR_int = 1'b1;
+	PRLD_int = 1'b1;
+	#(ROC_WIDTH)
+	GSR_int = 1'b0;
+	PRLD_int = 1'b0;
+    end
+
+    initial begin
+	GTS_int = 1'b1;
+	#(TOC_WIDTH)
+	GTS_int = 1'b0;
+    end
+
+endmodule
+`endif
